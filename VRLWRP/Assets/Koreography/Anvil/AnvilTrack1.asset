@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: AnvilTrack1
+  m_EditorClassIdentifier: 
+  mEventID: AnvilTrack1
+  mEventList:
+  - mStartSample: 205800
+    mEndSample: 205800
+  - mStartSample: 235200
+    mEndSample: 235200
+  - mStartSample: 264600
+    mEndSample: 264600
+  - mStartSample: 294000
+    mEndSample: 294000
+  - mStartSample: 382200
+    mEndSample: 382200
+  - mStartSample: 470400
+    mEndSample: 470400
+  - mStartSample: 588000
+    mEndSample: 588000
+  - mStartSample: 646800
+    mEndSample: 646800
+  - mStartSample: 705600
+    mEndSample: 705600
+  - mStartSample: 764400
+    mEndSample: 764400
+  - mStartSample: 823200
+    mEndSample: 823200
+  - mStartSample: 882000
+    mEndSample: 882000
+  - mStartSample: 940800
+    mEndSample: 940800
+  - mStartSample: 1029000
+    mEndSample: 1029000
+  - mStartSample: 1117200
+    mEndSample: 1117200
+  - mStartSample: 1205400
+    mEndSample: 1205400
+  - mStartSample: 1293600
+    mEndSample: 1293600
+  - mStartSample: 1381800
+    mEndSample: 1381800
+  - mStartSample: 1470000
+    mEndSample: 1470000
+  - mStartSample: 1528800
+    mEndSample: 1528800
+  - mStartSample: 1558200
+    mEndSample: 1558200
+  - mStartSample: 1675800
+    mEndSample: 1675800
+  - mStartSample: 1764000
+    mEndSample: 1764000
+  - mStartSample: 1881600
+    mEndSample: 1881600
+  - mStartSample: 1969800
+    mEndSample: 1969800
+  - mStartSample: 2058000
+    mEndSample: 2058000
+  - mStartSample: 2146200
+    mEndSample: 2146200
+  - mStartSample: 2234400
+    mEndSample: 2234400
+  - mStartSample: 2352000
+    mEndSample: 2352000
+  - mStartSample: 2469600
+    mEndSample: 2469600
+  - mStartSample: 2587200
+    mEndSample: 2587200
+  - mStartSample: 2675400
+    mEndSample: 2675400
+  - mStartSample: 2793000
+    mEndSample: 2793000
+  - mStartSample: 2940000
+    mEndSample: 2940000
+  - mStartSample: 3057600
+    mEndSample: 3057600
+  - mStartSample: 3175200
+    mEndSample: 3175200
+  - mStartSample: 3234000
+    mEndSample: 3234000
+  - mStartSample: 3351600
+    mEndSample: 3351600
+  - mStartSample: 3439800
+    mEndSample: 3439800
+  - mStartSample: 3557400
+    mEndSample: 3557400
+  - mStartSample: 3645600
+    mEndSample: 3645600
+  - mStartSample: 3733800
+    mEndSample: 3733800
+  _SerializedPayloadTypes: []
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 

@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: d9c8005123d418a45bae301f653c1117
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box003
+    100004: Box004
+    100006: Box005
+    100008: Box006
+    100010: Box007
+    100012: Box008
+    100014: Box009
+    100016: Box010
+    100018: Bucket
+    100020: Bucket 1
+    100022: BucketLegs
+    100024: Circle001
+    100026: Cube_1
+    100028: Cube__12_
+    100030: Cube__13_
+    100032: Cube__14_
+    100034: Cube__1_
+    100036: Cube__24_
+    100038: Cube__25_
+    100040: Cube__26_
+    100042: Cylinder002
+    100044: Cylinder003
+    100046: Cylinder004
+    100048: Cylinder005
+    100050: DoorHandle
+    100052: Floor
+    100054: Object
+    100056: Object002
+    100058: Object004
+    100060: Object006
+    100062: Object008
+    100064: //RootNode
+    100066: Sword
+    100068: Sword__4_
+    100070: Torus001
+    100072: Wall002
+    100074: WaterBucket
+    400000: Box001
+    400002: Box003
+    400004: Box004
+    400006: Box005
+    400008: Box006
+    400010: Box007
+    400012: Box008
+    400014: Box009
+    400016: Box010
+    400018: Bucket
+    400020: Bucket 1
+    400022: BucketLegs
+    400024: Circle001
+    400026: Cube_1
+    400028: Cube__12_
+    400030: Cube__13_
+    400032: Cube__14_
+    400034: Cube__1_
+    400036: Cube__24_
+    400038: Cube__25_
+    400040: Cube__26_
+    400042: Cylinder002
+    400044: Cylinder003
+    400046: Cylinder004
+    400048: Cylinder005
+    400050: DoorHandle
+    400052: Floor
+    400054: Object
+    400056: Object002
+    400058: Object004
+    400060: Object006
+    400062: Object008
+    400064: //RootNode
+    400066: Sword
+    400068: Sword__4_
+    400070: Torus001
+    400072: Wall002
+    400074: WaterBucket
+    2100000: New_Material
+    2100002: table
+    2100004: No Name
+    2100006: 'Material #28'
+    2100008: 'Material #29'
+    2100010: Sword
+    2100012: 'Material #25'
+    2300000: Box001
+    2300002: Box003
+    2300004: Box004
+    2300006: Box005
+    2300008: Box006
+    2300010: Box007
+    2300012: Box008
+    2300014: Box009
+    2300016: Box010
+    2300018: Bucket 1
+    2300020: BucketLegs
+    2300022: Cube_1
+    2300024: Cube__12_
+    2300026: Cube__13_
+    2300028: Cube__14_
+    2300030: Cube__1_
+    2300032: Cube__24_
+    2300034: Cube__25_
+    2300036: Cube__26_
+    2300038: Cylinder002
+    2300040: Cylinder003
+    2300042: Cylinder004
+    2300044: DoorHandle
+    2300046: Floor
+    2300048: Object
+    2300050: Object002
+    2300052: Object004
+    2300054: Object006
+    2300056: Object008
+    2300058: Sword
+    2300060: Sword__4_
+    2300062: Torus001
+    2300064: Wall002
+    3300000: Box001
+    3300002: Box003
+    3300004: Box004
+    3300006: Box005
+    3300008: Box006
+    3300010: Box007
+    3300012: Box008
+    3300014: Box009
+    3300016: Box010
+    3300018: Bucket 1
+    3300020: BucketLegs
+    3300022: Cube_1
+    3300024: Cube__12_
+    3300026: Cube__13_
+    3300028: Cube__14_
+    3300030: Cube__1_
+    3300032: Cube__24_
+    3300034: Cube__25_
+    3300036: Cube__26_
+    3300038: Cylinder002
+    3300040: Cylinder003
+    3300042: Cylinder004
+    3300044: DoorHandle
+    3300046: Floor
+    3300048: Object
+    3300050: Object002
+    3300052: Object004
+    3300054: Object006
+    3300056: Object008
+    3300058: Sword
+    3300060: Sword__4_
+    3300062: Torus001
+    3300064: Wall002
+    4300000: Cube__24_
+    4300002: Cube__12_
+    4300004: Cube__26_
+    4300006: Cube__1_
+    4300008: Cube__14_
+    4300010: Cube__25_
+    4300012: Cube_1
+    4300014: Cube__13_
+    4300016: Box003
+    4300018: Box001
+    4300020: Wall002
+    4300022: Sword__4_
+    4300024: Sword
+    4300026: Floor
+    4300028: Box004
+    4300030: Box005
+    4300032: Box006
+    4300034: Box007
+    4300036: BucketLegs
+    4300038: Bucket
+    4300040: DoorHandle
+    4300042: Object002
+    4300044: Cylinder002
+    4300046: Box008
+    4300048: Cylinder003
+    4300050: Cylinder004
+    4300052: Box009
+    4300054: Torus001
+    4300056: Box010
+    4300058: Object
+    4300060: Object004
+    4300062: Object006
+    4300064: Object008
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
