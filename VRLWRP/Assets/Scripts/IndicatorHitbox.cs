@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IndicatorHitbox : MonoBehaviour
 {
+    public Indicator yellowIndicator;
     public Indicator greenIndicator;
     public GameObject hitParticle;
 
@@ -26,24 +27,47 @@ public class IndicatorHitbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "HammerHead" && greenIndicator.activated)
+        if (GameManager.instance.isPlayingSong)
         {
-            string handHoldingHammer = other.transform.parent.gameObject.GetComponent<OVRGrabbable>().grabbedBy.ToString();
-            if (handHoldingHammer == "AvatarGrabberRight (OVRGrabber)")
+            if (other.tag == "HammerHead" && greenIndicator.activated)
             {
-                ControllerManager.CM.StartVibration(1, 1, 0.1f, OVRInput.Controller.RTouch);
-            }
-            else if (handHoldingHammer == "AvatarGrabberLeft (OVRGrabber)")
+                GoodHitReaction(other);
+            } else if(other.tag == "HammerHead" && yellowIndicator.activated)
             {
-                ControllerManager.CM.StartVibration(1, 1, 0.1f, OVRInput.Controller.LTouch);
+                EarlyHitReaction(other);
             }
-            GameObject hitInstance = GameObject.Instantiate(hitParticle, other.ClosestPointOnBounds(transform.position)+new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
-            hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
-            //hitInstance.transform.LookAt(playerCamera);
-            greenIndicator.hitSuccess = true;
-        } else if (other.tag == "HammerHead" && !greenIndicator.activated && GameManager.instance.isPlayingSong)
-        {
-            GameManager.instance.AddBadHit();
+            else if (other.tag == "HammerHead" && !greenIndicator.activated)
+            {
+                MissHitReaction(other);
+            }
         }
+       
+    }
+
+    void GoodHitReaction(Collider other)
+    {
+        string handHoldingHammer = other.transform.parent.gameObject.GetComponent<OVRGrabbable>().grabbedBy.ToString();
+        if (handHoldingHammer == "AvatarGrabberRight (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(1, 1, 0.1f, OVRInput.Controller.RTouch);
+        }
+        else if (handHoldingHammer == "AvatarGrabberLeft (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(1, 1, 0.1f, OVRInput.Controller.LTouch);
+        }
+        GameObject hitInstance = GameObject.Instantiate(hitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+        hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
+        //hitInstance.transform.LookAt(playerCamera);
+        greenIndicator.hitSuccess = true;
+    }
+
+    void MissHitReaction(Collider other)
+    {
+        GameManager.instance.AddBadHit();
+    }
+
+    void EarlyHitReaction(Collider other)
+    {
+
     }
 }
