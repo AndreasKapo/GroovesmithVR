@@ -30,7 +30,7 @@ public class MusicPlayer : MonoBehaviour {
 
     public void StartPlayingMusic()
     {
-        GameManager.instance.isPlayingSong = true;
+        GameManager.instance.StartSong();
         smp.Play();
         isPlayingSong = true;
     }

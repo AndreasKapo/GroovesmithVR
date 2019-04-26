@@ -89,4 +89,12 @@ public class IndicatorManager : MonoBehaviour
             GameManager.instance.AddMiss();
         }
     }
+
+    public void DeactivateAllIndicators()
+    {
+        for(int i=0; i<indicators.Length; i++)
+        {
+            indicators[i].DeActivate();
+        }
+    }
 }

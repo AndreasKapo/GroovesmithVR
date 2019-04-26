@@ -7,6 +7,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
     public Transform metalSongLocation;
     public GameEvent beginAnvilTransition;
 
+    SongMetal songMetal;
     bool hasMetal;
 
     private void OnTriggerStay(Collider other)
@@ -15,8 +16,9 @@ public class AnvilMetalTrigger : MonoBehaviour {
         {
             other.transform.position = metalSongLocation.position;
             other.transform.rotation = metalSongLocation.rotation;
+            other.GetComponent<MetalCollider>().PutOnAnvil();
 
-            SongMetal songMetal = other.GetComponent<SongMetal>();
+            songMetal = other.GetComponent<SongMetal>();
             GameManager.instance.SetKoreography(songMetal.clip, songMetal.koreography);
 
             hasMetal = true;
@@ -25,9 +27,10 @@ public class AnvilMetalTrigger : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "SongMetal")
+        if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle)
         {
             hasMetal = false;
+            GameManager.instance.EndSong();
         }
     }
 

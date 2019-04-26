@@ -74,12 +74,16 @@ public class GameManager : MonoBehaviour {
         numGoodHits = 0;
         numBadHits = 0;
         numMisses = 0;
+        beatEventIndex = 0;
+
+        Koreographer.Instance.ClearEventRegister();
 
         //Koreographer.Instance.ClearEventRegister();
         this.koreoGraphy = koreography;
         GetComponent<AudioSource>().clip = clip;
 
         smp.LoadSong(koreography, 0, false);
+
         Koreographer.Instance.LoadKoreography(koreography);
 
         
@@ -88,7 +92,6 @@ public class GameManager : MonoBehaviour {
         {
             if(koreography.GetTrackAtIndex(i).EventID != "Beats" && koreography.GetTrackAtIndex(i).EventID != "EndOfSong") { 
                 indicatorManagers[i].SetLaneEvents(koreography.GetTrackAtIndex(i));
-                beatEventIndex = 0;
             }
            
         }
@@ -143,6 +146,23 @@ public class GameManager : MonoBehaviour {
         {
             manager.BeatIterate();
         }
+    }
+
+    public void StartSong()
+    {
+        worldState = WorldState.PlayingAnvilSong;
+        this.isPlayingSong = true;
+    }
+
+    public void EndSong()
+    {
+        foreach (IndicatorManager manager in indicatorManagers)
+        {
+            manager.DeactivateAllIndicators();
+        }
+        smp.StopAllCoroutines();
+        smp.Stop();
+        this.isPlayingSong = false;
     }
 
     public void EndOfSong(KoreographyEvent evt)

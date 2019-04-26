@@ -20,6 +20,7 @@ public class StateManager : MonoBehaviour
 
     enum TransitionToAnvilStates
     {
+        None,
         DimDirectionalLight,
         BrightenSpotLight
     }
@@ -87,6 +88,7 @@ public class StateManager : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Start Song event Risen");
                     startSongEvent.Raise();
                 }
             }

@@ -86,6 +86,7 @@ public class SongPlayer : MonoBehaviour {
         {
             PM.EnableAll();
         }
+
     }
 
     private void PlayMetronome()

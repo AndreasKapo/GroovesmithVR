@@ -6,11 +6,14 @@ public class MetalCollider : MonoBehaviour {
 
     public Collider shortCollider;
     public Collider longCollider;
+    Rigidbody rb;
+    public bool isOnAnvil;
 
     private void Awake()
     {
         shortCollider.enabled = true;
         longCollider.enabled = false;
+        rb = GetComponent<Rigidbody>();
     }
     // Use this for initialization
     
@@ -25,9 +28,23 @@ public class MetalCollider : MonoBehaviour {
     {
         GetComponent<OVRGrabbable>().enabled = grabbable;
     }
+
+    public void SetKinematic(bool kinematic)
+    {
+        rb.isKinematic = kinematic;
+    }
+
+    public void PutOnAnvil()
+    {
+        SetKinematic(true);
+        isOnAnvil = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(!isOnAnvil && (GetComponent<OVRGrabbable>().enabled && GetComponent<OVRGrabbable>().grabbedBy != null))
+        {
+            SetKinematic(false);
+        }
 	}
 }

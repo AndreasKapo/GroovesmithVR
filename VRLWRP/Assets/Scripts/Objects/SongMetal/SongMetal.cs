@@ -8,5 +8,6 @@ public class SongMetal : MonoBehaviour {
     
     public AudioClip clip;
     public Koreography koreography;
+    public string songTitle;
 	
 }
