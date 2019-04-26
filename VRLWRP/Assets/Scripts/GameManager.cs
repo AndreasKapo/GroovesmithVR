@@ -145,6 +145,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void EndSong()
+    {
+
+    }
+
     public void EndOfSong(KoreographyEvent evt)
     {
         endOfSongEvent.Raise();
