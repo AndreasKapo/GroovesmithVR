@@ -20,6 +20,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
 
             songMetal = other.GetComponent<SongMetal>();
             GameManager.instance.SetKoreography(songMetal.clip, songMetal.koreography);
+            GameManager.instance.SetSwordBlend(other.GetComponent<SwordBlend>());
 
             hasMetal = true;
         }

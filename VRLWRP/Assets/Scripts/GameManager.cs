@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour {
     public int beatEventIndex;
 
     public List<IndicatorManager> indicatorManagers;
+
     public Koreography koreoGraphy;
+    SwordBlend swordBlend;
 
     public int spawnEarlyInSeconds = 1;
     public bool isPlayingSong;
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour {
 
 
     public WorldState worldState;
+
 
     public int numBeats;
     public int numGoodHits;
@@ -118,6 +121,11 @@ public class GameManager : MonoBehaviour {
 
 
 
+    }
+
+    public void SetSwordBlend(SwordBlend swordBlend)
+    {
+        this.swordBlend = swordBlend;
     }
 
     //Reads through the beat events, checks four beats ahead to see if the next beat should be spawned

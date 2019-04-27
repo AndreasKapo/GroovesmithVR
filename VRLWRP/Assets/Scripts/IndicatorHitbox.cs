@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IndicatorHitbox : MonoBehaviour
 {
+
     public Indicator yellowIndicator;
     public Indicator greenIndicator;
     public GameObject hitParticle;
@@ -12,7 +13,13 @@ public class IndicatorHitbox : MonoBehaviour
 
     [SerializeField]
     FloatVariable particleHeightDiff;
+    
 
+    bool isHittable = true;
+    public FloatVariable hitCooldownTime;
+    float hitCoolTimer = 0f;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +29,24 @@ public class IndicatorHitbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isHittable)
+        {
+            hitCoolTimer += Time.deltaTime;
+            if (hitCoolTimer > hitCooldownTime.Value)
+            {
+                isHittable = true;
+                hitCoolTimer = 0f;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (GameManager.instance.isPlayingSong)
         {
-            if(other.tag == "HammerHead"){
+            if(other.tag == "HammerHead" && isHittable){
+                isHittable = false;
+
                 if (greenIndicator.activated)
                 {
                     GoodHitReaction(other);

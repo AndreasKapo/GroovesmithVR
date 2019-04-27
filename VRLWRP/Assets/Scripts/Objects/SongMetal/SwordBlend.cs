@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SwordBlend : MonoBehaviour {
-
-    public GameObject shape;
+    
     int blendShapeCount;
     SkinnedMeshRenderer skinnedMeshRenderer;
     Mesh skinnedMesh;
@@ -16,8 +15,8 @@ public class SwordBlend : MonoBehaviour {
 
     void Awake()
     {
-        skinnedMeshRenderer = shape.GetComponent<SkinnedMeshRenderer>();
-        skinnedMesh = shape.GetComponent<SkinnedMeshRenderer>().sharedMesh;
+        skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
+        skinnedMesh = GetComponent<SkinnedMeshRenderer>().sharedMesh;
     }
 
     void Start()
@@ -60,8 +59,12 @@ public class SwordBlend : MonoBehaviour {
     public void BadHit(float blendAmount)
     {
         blendTwo += blendAmount;
-        blendThree += blendAmount;
         skinnedMeshRenderer.SetBlendShapeWeight(1, blendTwo);
+    }
+
+    public void MissHit(float blendAmount)
+    {
+        blendThree += blendAmount;
         skinnedMeshRenderer.SetBlendShapeWeight(2, blendThree);
     }
 }
