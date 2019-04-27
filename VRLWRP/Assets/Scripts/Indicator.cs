@@ -38,13 +38,13 @@ public class Indicator : MonoBehaviour
         GetComponent<Renderer>().material = activatedMaterial;
         activated = true;
         
-        Debug.Log(gameObject.name + "  Activated   " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
+        //Debug.Log(gameObject.name + "  Activated   " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
     }
 
     public void DeActivate()
     {
         GetComponent<Renderer>().material = inactiveMaterial;
         activated = false;
-        Debug.Log(gameObject.name + "  DeActivated   " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
+       // Debug.Log(gameObject.name + "  DeActivated   " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
     }
 }

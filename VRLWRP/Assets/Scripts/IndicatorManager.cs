@@ -78,13 +78,15 @@ public class IndicatorManager : MonoBehaviour
 
     void IndicatorDone(bool hitSuccess, bool badHit)
     {
-        if (hitSuccess)
-        {
-            GameManager.instance.AddGoodHit();
-        } else if (badHit)
+        if (badHit)
         {
             GameManager.instance.AddBadHit();
-        } else
+        }
+        else if (hitSuccess)
+        {
+            GameManager.instance.AddGoodHit();
+        }
+        else
         {
             GameManager.instance.AddMiss();
         }
