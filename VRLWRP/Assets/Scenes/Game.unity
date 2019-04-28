@@ -2032,6 +2032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17281c0a594767148b81d55ea1180e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blendOne: 0
+  blendTwo: 0
+  blendThree: 0
 --- !u!95 &4400839638325072728
 Animator:
   serializedVersion: 3
@@ -4769,6 +4772,7 @@ GameObject:
   - component: {fileID: 4400839639758062086}
   - component: {fileID: 4400839639758062084}
   - component: {fileID: 4400839639758062085}
+  - component: {fileID: 4400839639758062088}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -4776,6 +4780,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4400839639758062088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400839639758062087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae394287dbf942049b7c67e66ecf807c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4400839639781256616
 Transform:
   m_ObjectHideFlags: 0
@@ -5093,6 +5109,7 @@ MonoBehaviour:
   - {fileID: 1372683404}
   - {fileID: 1533765196}
   koreoGraphy: {fileID: 0}
+  swordBlend: {fileID: 0}
   spawnEarlyInSeconds: 1
   isPlayingSong: 0
   worldState: 0

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     public List<IndicatorManager> indicatorManagers;
 
     public Koreography koreoGraphy;
-    SwordBlend swordBlend;
+    public SwordBlend swordBlend;
 
     public int spawnEarlyInSeconds = 1;
     public bool isPlayingSong;
@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour {
         {
             if(koreography.GetTrackAtIndex(i).EventID != "Beats" && koreography.GetTrackAtIndex(i).EventID != "EndOfSong") { 
                 indicatorManagers[i].SetLaneEvents(koreography.GetTrackAtIndex(i));
+                numBeats += koreography.GetTrackAtIndex(i).GetAllEvents().Count;
             }
            
         }
@@ -103,7 +104,6 @@ public class GameManager : MonoBehaviour {
             if (koreography.GetTrackAtIndex(i).EventID == "Beats")
             {
                 beatEvents = koreography.GetTrackAtIndex(i).GetAllEvents();
-                numBeats += beatEvents.Count;
             }
         }
 
@@ -186,15 +186,18 @@ public class GameManager : MonoBehaviour {
     public void AddGoodHit()
     {
         this.numGoodHits++;
+        swordBlend.GoodHit(100f / numBeats);
     }
 
     public void AddBadHit()
     {
         this.numBadHits++;
+        swordBlend.BadHit(100f / numBeats);
     }
 
     public void AddMiss()
     {
         this.numMisses++;
+        swordBlend.MissHit(100f / numBeats);
     }
 }

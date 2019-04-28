@@ -7,9 +7,9 @@ public class SwordBlend : MonoBehaviour {
     int blendShapeCount;
     SkinnedMeshRenderer skinnedMeshRenderer;
     Mesh skinnedMesh;
-    float blendOne = 0f;
-    float blendTwo = 0f;
-    float blendThree = 0f;
+    public float blendOne = 0f;
+    public float blendTwo = 0f;
+    public float blendThree = 0f;
     float blendSpeed = 1f;
     bool blendOneFinished = false;
 
