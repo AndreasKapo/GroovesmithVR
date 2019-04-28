@@ -46,10 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 59bb84220f75dec47887f37c498a1756, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
+  inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
 --- !u!33 &269031159847089866
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -154,6 +156,7 @@ MonoBehaviour:
   hitParticle: {fileID: 1378907115465920, guid: 42a4458a65189f94186e287063e78754,
     type: 3}
   particleHeightDiff: {fileID: 11400000, guid: ca4e9c8e7654fd34db11862dfa2578dc, type: 2}
+  hitCooldownTime: {fileID: 11400000, guid: 43b18ca9986f6b54b8ec7ba95d3b5c70, type: 2}
 --- !u!23 &423149210545208083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -250,10 +253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 1e8a75a0d29e0db4687a73828e87bb3c, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
+  inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
 --- !u!33 &8631714050656457794
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -345,10 +350,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 81a848d98f5d2134792903db52284b0d, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
+  inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
 --- !u!33 &8192945925273276276
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -495,10 +502,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 37ad8508a0c4fe84890466d90d3c978c, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
+  inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
 --- !u!114 &3524223698664436152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,10 +521,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 0}
   inactiveMaterial: {fileID: 0}
+  inertMaterial: {fileID: 0}
 --- !u!33 &8646061675095704785
 MeshFilter:
   m_ObjectHideFlags: 0

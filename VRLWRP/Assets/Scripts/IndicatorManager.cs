@@ -38,8 +38,14 @@ public class IndicatorManager : MonoBehaviour
                 if (indicators[i].activated)
                 {
                     foundActivated = true;
+                    if (!indicators[i].inert)
+                    {
+                        indicators[i + 1].Activate();
+                    } else if (indicators[i].inert)
+                    {
+                        indicators[i + 1].ActivateInert();
+                    }
                     indicators[i].DeActivate();
-                    indicators[i + 1].Activate();
                     //break;
                 }
             }
@@ -47,11 +53,14 @@ public class IndicatorManager : MonoBehaviour
             {
                 if (indicators[i].activated)
                 {
+                    
                     IndicatorDone(indicators[i].hitSuccess, indicators[i].badHit);
                     foundActivated = true;
                     indicators[i].DeActivate();
                     indicators[i].hitSuccess = false;
                     indicators[i].badHit = false;
+                    
+                    
                 }
             }
         }

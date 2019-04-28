@@ -49,7 +49,10 @@ public class IndicatorHitbox : MonoBehaviour
 
                 if (greenIndicator.activated)
                 {
-                    GoodHitReaction(other);
+                    if (!greenIndicator.inert)
+                    {
+                        GoodHitReaction(other);
+                    }
                 }
                 else if (yellowIndicator.activated)
                 {
@@ -102,6 +105,6 @@ public class IndicatorHitbox : MonoBehaviour
         AudioManager.instance.PlayBadAnvilHit();
         GameObject hitInstance = GameObject.Instantiate(hitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
         hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
-
+        yellowIndicator.RenderInert();
     }
 }
