@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour {
     public int numGoodHits;
     public int numBadHits;
     public int numMisses;
+
+    public int multiplier = 1;
+    public int multiplierCounter;
+    public int score;
+    
+
+    public int scorePerHit = 150;
     
     void Awake()
     {
@@ -78,6 +85,9 @@ public class GameManager : MonoBehaviour {
         numBadHits = 0;
         numMisses = 0;
         beatEventIndex = 0;
+        multiplierCounter = 0;
+        score = 0;
+        multiplier = 1;
 
         Koreographer.Instance.ClearEventRegister();
 
@@ -187,17 +197,50 @@ public class GameManager : MonoBehaviour {
     {
         this.numGoodHits++;
         swordBlend.GoodHit(100f / numBeats);
+
+        multiplierCounter++;
+        CalculateMultiplier();
+
+        score += scorePerHit * multiplier;
     }
 
     public void AddBadHit()
     {
         this.numBadHits++;
         swordBlend.BadHit(100f / numBeats);
+
+        multiplierCounter = 0;
+        CalculateMultiplier();
+
     }
 
     public void AddMiss()
     {
         this.numMisses++;
         swordBlend.MissHit(100f / numBeats);
+
+        multiplierCounter = 0;
+        CalculateMultiplier();
+    }
+
+    void CalculateMultiplier()
+    {
+
+        if (multiplierCounter > 30)
+        {
+            multiplier = 4;
+        }
+        else if (multiplierCounter > 20)
+        {
+            multiplier = 3;
+        }
+        else if (multiplierCounter > 10)
+        {
+            multiplier = 2;
+        }
+        else
+        {
+            multiplier = 1;
+        }
     }
 }

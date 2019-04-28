@@ -14,6 +14,10 @@ public class ScoreUI : MonoBehaviour
     float blendTwo;
     float blendThree;
 
+    int multiplierCounter;
+    int multiplier;
+    int score;
+
     Text text;
 
     // Start is called before the first frame update
@@ -36,6 +40,7 @@ public class ScoreUI : MonoBehaviour
         textString += "\n numBadHits: " + numBadHits;
         textString += "\n numMisses: " + numMisses;
 
+        /*
         blendOne = GameManager.instance.swordBlend.blendOne;
         blendTwo = GameManager.instance.swordBlend.blendTwo;
         blendThree = GameManager.instance.swordBlend.blendThree;
@@ -43,9 +48,18 @@ public class ScoreUI : MonoBehaviour
         textString += "\n";
         textString += "\n blendOne: " + blendOne;
         textString += "\n blendTwo: " + blendTwo;
-        textString += "\n blendThree: " + blendThree;
+        textString += "\n blendThree: " + blendThree;*/
 
-        text.text = textString;
+        multiplierCounter = GameManager.instance.multiplierCounter;
+        multiplier = GameManager.instance.multiplier;
+        score = GameManager.instance.score;
+
+        textString += "\n";
+        textString += "\n multiplierCounter: " + multiplierCounter;
+        textString += "\n multiplier: " + multiplier;
+        textString += "\n score: " + score; 
+
+         text.text = textString;
     }
 
 
