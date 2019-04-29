@@ -141,9 +141,9 @@ public class GameManager : MonoBehaviour {
     //Reads through the beat events, checks four beats ahead to see if the next beat should be spawned
     public int GetNextBeatHitTime()
     {
-        if(beatEvents.Count >= (beatEventIndex + 3))
+        if(beatEvents.Count >= (beatEventIndex + 2))
         {
-            return beatEvents[beatEventIndex + 3].StartSample;
+            return beatEvents[beatEventIndex + 2].StartSample;
         } else
         {
             return beatEvents[beatEvents.Count-1].StartSample;
