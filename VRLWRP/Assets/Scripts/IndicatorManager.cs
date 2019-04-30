@@ -20,7 +20,7 @@ public class IndicatorManager : MonoBehaviour
     {
         //
         int nextBeatSample = GameManager.instance.GetNextBeatHitTime();
-        if ((laneEvents[laneEventIndex].StartSample) <= nextBeatSample)
+        if (laneEventIndex < laneEvents.Count && (laneEvents[laneEventIndex].StartSample) <= nextBeatSample)
         {
             ActivateInitialIndicator();
             laneEventIndex++;
