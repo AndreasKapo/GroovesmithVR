@@ -13,7 +13,13 @@ public class IndicatorManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
+        {
+            if (GameManager.instance.isFreeHit)
+            {
+
+            }
+        }
     }
 
     void CheckSpawnNext()
@@ -29,6 +35,8 @@ public class IndicatorManager : MonoBehaviour
 
     public void BeatIterate()
     {
+        
+
         //Debug.Log("BeatIterate " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
         bool foundActivated = false;
         for(int i= indicators.Length-1; i>=0; i--)
@@ -106,6 +114,22 @@ public class IndicatorManager : MonoBehaviour
         for(int i=0; i<indicators.Length; i++)
         {
             indicators[i].DeActivate();
+        }
+    }
+
+    public void StartFreeHit()
+    {
+        for (int i = 0; i < indicators.Length; i++)
+        {
+            indicators[i].EnableFreeHit();
+        }
+    }
+
+    public void StopFreeHit()
+    {
+        for (int i = 0; i < indicators.Length; i++)
+        {
+            indicators[i].DisableFreeHit();
         }
     }
 }

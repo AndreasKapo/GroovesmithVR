@@ -5112,11 +5112,20 @@ MonoBehaviour:
   swordBlend: {fileID: 0}
   spawnEarlyInSeconds: 1
   isPlayingSong: 0
+  currentFreeHitEvent:
+    mStartSample: 0
+    mEndSample: 0
+  isFreeHit: 0
+  freeHitEndSampleTime: 0
   worldState: 0
   numBeats: 0
   numGoodHits: 0
   numBadHits: 0
   numMisses: 0
+  multiplier: 1
+  multiplierCounter: 0
+  score: 0
+  scorePerHit: 150
 --- !u!114 &4400839639783339079
 MonoBehaviour:
   m_ObjectHideFlags: 0

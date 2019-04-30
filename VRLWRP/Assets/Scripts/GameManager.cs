@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour {
     public int spawnEarlyInSeconds = 1;
     public bool isPlayingSong;
 
-    
+
+    public KoreographyEvent currentFreeHitEvent;
+    public bool isFreeHit = false;
+    public int freeHitEndSampleTime;
 
 
     public WorldState worldState;
@@ -78,7 +81,7 @@ public class GameManager : MonoBehaviour {
         smp = GetComponent<SimpleMusicPlayer>();
     }
 
-    public void SetKoreography(AudioClip clip, Koreography koreography)
+    public void SetKoreography(AudioClip clip, Koreography koreography, string songTitle)
     {
         numBeats = 0;
         numGoodHits = 0;
@@ -103,11 +106,8 @@ public class GameManager : MonoBehaviour {
         
         for(int i=0; i<indicatorManagers.Count; i++)
         {
-            if(koreography.GetTrackAtIndex(i).EventID != "Beats" && koreography.GetTrackAtIndex(i).EventID != "EndOfSong") { 
-                indicatorManagers[i].SetLaneEvents(koreography.GetTrackAtIndex(i));
-                numBeats += koreography.GetTrackAtIndex(i).GetAllEvents().Count;
-            }
-           
+            indicatorManagers[i].SetLaneEvents(koreography.GetTrackAtIndex(i));
+            numBeats += koreography.GetTrackAtIndex(i).GetAllEvents().Count;
         }
         for(int i =0; i < koreography.GetNumTracks(); i++)
         {
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour {
 
         Koreographer.Instance.RegisterForEvents("EndOfSong", EndOfSong);
 
-
+        Koreographer.Instance.RegisterForEvents("FreeHit", StartFreeHit);
 
     }
 
@@ -170,6 +170,25 @@ public class GameManager : MonoBehaviour {
     {
         worldState = WorldState.PlayingAnvilSong;
         this.isPlayingSong = true;
+    }
+
+    public void StartFreeHit(KoreographyEvent evt)
+    {
+        freeHitEndSampleTime = evt.EndSample;
+        isFreeHit = true;
+        foreach (IndicatorManager manager in indicatorManagers)
+        {
+            manager.StartFreeHit();
+        }
+    }
+
+    public void StopFreeHit()
+    {
+        isFreeHit = false;
+        foreach (IndicatorManager manager in indicatorManagers)
+        {
+            manager.StopFreeHit();
+        }
     }
 
     public void EndSong()
@@ -243,4 +262,8 @@ public class GameManager : MonoBehaviour {
             multiplier = 1;
         }
     }
+
+    
+
+
 }

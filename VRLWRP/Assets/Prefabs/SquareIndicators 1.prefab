@@ -46,12 +46,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHit: 0
   inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 59bb84220f75dec47887f37c498a1756, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
+  freeHitColor1: {r: 0.036845855, g: 0.33962262, b: 0.09680163, a: 1}
+  freeHitColor2: {r: 0.068752214, g: 0.9716981, b: 0.0969415, a: 1}
+  freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
 --- !u!33 &269031159847089866
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -253,12 +259,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHit: 0
   inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 1e8a75a0d29e0db4687a73828e87bb3c, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
+  freeHitColor1: {r: 0.036845855, g: 0.33962262, b: 0.09680163, a: 1}
+  freeHitColor2: {r: 0.068752214, g: 0.9716981, b: 0.0969415, a: 1}
+  freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
 --- !u!33 &8631714050656457794
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -350,12 +362,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHit: 0
   inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 81a848d98f5d2134792903db52284b0d, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
+  freeHitColor1: {r: 0.036845855, g: 0.33962262, b: 0.09680163, a: 1}
+  freeHitColor2: {r: 0.068752214, g: 0.9716981, b: 0.0969415, a: 1}
+  freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
 --- !u!33 &8192945925273276276
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -502,12 +520,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHit: 0
   inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 2100000, guid: 37ad8508a0c4fe84890466d90d3c978c, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
+  freeHitColor1: {r: 0.036845855, g: 0.33962262, b: 0.09680163, a: 1}
+  freeHitColor2: {r: 0.068752214, g: 0.9716981, b: 0.0969415, a: 1}
+  freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
 --- !u!114 &3524223698664436152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,12 +545,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHit: 0
   inert: 0
   hitSuccess: 0
   badHit: 0
   activatedMaterial: {fileID: 0}
   inactiveMaterial: {fileID: 0}
   inertMaterial: {fileID: 0}
+  freeHitMaterial: {fileID: 0}
+  freeHitColor1: {r: 0, g: 0, b: 0, a: 0}
+  freeHitColor2: {r: 0, g: 0, b: 0, a: 0}
+  freeHitPulseTransitionTime: {fileID: 0}
 --- !u!33 &8646061675095704785
 MeshFilter:
   m_ObjectHideFlags: 0
