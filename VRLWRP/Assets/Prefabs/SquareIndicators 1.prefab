@@ -489,7 +489,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8646061675092804849}
   - component: {fileID: 3574363698434204459}
-  - component: {fileID: 3524223698664436152}
   - component: {fileID: 8646061675095704785}
   - component: {fileID: 8646061675094705681}
   m_Layer: 0
@@ -540,30 +539,6 @@ MonoBehaviour:
     type: 2}
   freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
     type: 2}
---- !u!114 &3524223698664436152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8646061675092449489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c4d159bdf75454a9e86ef825868a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activated: 0
-  freeHit: 0
-  inert: 0
-  hitSuccess: 0
-  badHit: 0
-  activatedMaterial: {fileID: 0}
-  inactiveMaterial: {fileID: 0}
-  inertMaterial: {fileID: 0}
-  freeHitMaterial: {fileID: 0}
-  freeHitColorMaterial1: {fileID: 0}
-  freeHitColorMaterial2: {fileID: 0}
-  freeHitPulseTransitionTime: {fileID: 0}
 --- !u!33 &8646061675095704785
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: FreeHit
   mEventList:
-  - mStartSample: 646800
-    mEndSample: 705600
-  - mStartSample: 1117200
-    mEndSample: 1176000
+  - mStartSample: 147000
+    mEndSample: 6615000
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

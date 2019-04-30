@@ -44,8 +44,7 @@ public class Indicator : MonoBehaviour
 
     void Pulse()
     {
-
-        if (pulsingUp)
+       if (pulsingUp)
         {
             freeHitPulseTimer += Time.deltaTime * freeHitPulseTransitionTime.Value;
             if (freeHitPulseTimer >= 1)
@@ -64,7 +63,7 @@ public class Indicator : MonoBehaviour
             }
         }
 
-        GetComponent<Renderer>().material.Lerp(activatedMaterial, inertMaterial, freeHitPulseTimer);
+        freeHitMaterial.Lerp(freeHitColorMaterial1, freeHitColorMaterial2, freeHitPulseTimer);
 
     }
 
@@ -116,7 +115,7 @@ public class Indicator : MonoBehaviour
     {
         
         freeHit = true;
-        pulsingUp = true;
+        //pulsingUp = true;
         GetComponent<Renderer>().material = freeHitMaterial;
         
     }
