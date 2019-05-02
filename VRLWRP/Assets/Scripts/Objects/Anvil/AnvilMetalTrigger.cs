@@ -33,7 +33,10 @@ public class AnvilMetalTrigger : MonoBehaviour {
         if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle)
         {
             hasMetal = false;
-            GameManager.instance.EndSong();
+            if (GameManager.instance.isPlayingSong)
+            {
+                GameManager.instance.EndSong();
+            }
         }
     }
 
