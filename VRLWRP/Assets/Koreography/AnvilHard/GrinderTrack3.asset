@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: GrinderTrack3
+  m_EditorClassIdentifier: 
+  mEventID: GrinderTrack3
+  mEventList:
+  - mStartSample: 882000
+    mEndSample: 882000
+  - mStartSample: 940800
+    mEndSample: 940800
+  - mStartSample: 1029000
+    mEndSample: 1029000
+  - mStartSample: 1087800
+    mEndSample: 1087800
+  - mStartSample: 1146600
+    mEndSample: 1146600
+  - mStartSample: 1234800
+    mEndSample: 1234800
+  - mStartSample: 1308300
+    mEndSample: 1308300
+  - mStartSample: 1337700
+    mEndSample: 1337700
+  - mStartSample: 1367100
+    mEndSample: 1367100
+  - mStartSample: 1396500
+    mEndSample: 1396500
+  - mStartSample: 1425900
+    mEndSample: 1425900
+  - mStartSample: 1455300
+    mEndSample: 1455300
+  - mStartSample: 1484700
+    mEndSample: 1484700
+  - mStartSample: 1514100
+    mEndSample: 1514100
+  - mStartSample: 1617000
+    mEndSample: 1617000
+  - mStartSample: 1764000
+    mEndSample: 1764000
+  - mStartSample: 1837500
+    mEndSample: 1837500
+  - mStartSample: 1881600
+    mEndSample: 1881600
+  - mStartSample: 1999200
+    mEndSample: 1999200
+  - mStartSample: 2087400
+    mEndSample: 2087400
+  - mStartSample: 2146200
+    mEndSample: 2146200
+  - mStartSample: 2234400
+    mEndSample: 2234400
+  - mStartSample: 2322600
+    mEndSample: 2322600
+  - mStartSample: 2381400
+    mEndSample: 2381400
+  - mStartSample: 2499000
+    mEndSample: 2499000
+  - mStartSample: 2616600
+    mEndSample: 2616600
+  - mStartSample: 2851800
+    mEndSample: 2851800
+  - mStartSample: 2969400
+    mEndSample: 2969400
+  - mStartSample: 3145800
+    mEndSample: 3145800
+  - mStartSample: 3204600
+    mEndSample: 3204600
+  - mStartSample: 3263400
+    mEndSample: 3263400
+  - mStartSample: 3292800
+    mEndSample: 3292800
+  - mStartSample: 3322200
+    mEndSample: 3322200
+  - mStartSample: 3351600
+    mEndSample: 3351600
+  - mStartSample: 3381000
+    mEndSample: 3381000
+  - mStartSample: 3410400
+    mEndSample: 3410400
+  - mStartSample: 3439800
+    mEndSample: 3439800
+  - mStartSample: 3469200
+    mEndSample: 3469200
+  - mStartSample: 3498600
+    mEndSample: 3498600
+  - mStartSample: 3572100
+    mEndSample: 3572100
+  - mStartSample: 3660300
+    mEndSample: 3660300
+  - mStartSample: 3792600
+    mEndSample: 3792600
+  - mStartSample: 3910200
+    mEndSample: 3910200
+  - mStartSample: 3998400
+    mEndSample: 3998400
+  - mStartSample: 4057200
+    mEndSample: 4057200
+  - mStartSample: 4116000
+    mEndSample: 4116000
+  - mStartSample: 4174800
+    mEndSample: 4174800
+  - mStartSample: 4248300
+    mEndSample: 4248300
+  - mStartSample: 4277700
+    mEndSample: 4277700
+  - mStartSample: 4468800
+    mEndSample: 4468800
+  - mStartSample: 4498200
+    mEndSample: 4498200
+  - mStartSample: 4527600
+    mEndSample: 4527600
+  - mStartSample: 4557000
+    mEndSample: 4557000
+  - mStartSample: 4586400
+    mEndSample: 4586400
+  - mStartSample: 4615800
+    mEndSample: 4615800
+  - mStartSample: 4645200
+    mEndSample: 4645200
+  - mStartSample: 4674600
+    mEndSample: 4674600
+  - mStartSample: 4704000
+    mEndSample: 4704000
+  - mStartSample: 4909800
+    mEndSample: 4909800
+  _SerializedPayloadTypes: []
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 
