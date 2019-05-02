@@ -7,7 +7,9 @@ public class IndicatorHitbox : MonoBehaviour
 
     public Indicator yellowIndicator;
     public Indicator greenIndicator;
+    public GameObject freeHitParticle;
     public GameObject hitParticle;
+    public GameObject badHitParticle;
 
     Transform playerCamera;
 
@@ -46,8 +48,10 @@ public class IndicatorHitbox : MonoBehaviour
         {
             if(other.tag == "HammerHead" && isHittable){
                 isHittable = false;
-
-                if (greenIndicator.activated)
+                if (greenIndicator.freeHit)
+                {
+                    FreeHitReaction(other);
+                } else if (greenIndicator.activated)
                 {
                     if (!greenIndicator.inert)
                     {
@@ -68,9 +72,27 @@ public class IndicatorHitbox : MonoBehaviour
        
     }
 
-    void GoodHitReaction(Collider other)
+    void FreeHitReaction(Collider other)
     {
-        Debug.Log("GoodHitReaction");
+        string handHoldingHammer = other.transform.parent.gameObject.GetComponent<OVRGrabbable>().grabbedBy.ToString();
+        if (handHoldingHammer == "AvatarGrabberRight (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(1, 1, 0.1f, OVRInput.Controller.RTouch);
+        }
+        else if (handHoldingHammer == "AvatarGrabberLeft (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(1, 1, 0.1f, OVRInput.Controller.LTouch);
+        }
+        GameObject hitInstance = GameObject.Instantiate(freeHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+        hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
+        //hitInstance.transform.LookAt(playerCamera);
+        greenIndicator.hitSuccess = true;
+        AudioManager.instance.PlayGoodAnvilHit();
+    }
+
+        void GoodHitReaction(Collider other)
+    {
+        //Debug.Log("GoodHitReaction");
         string handHoldingHammer = other.transform.parent.gameObject.GetComponent<OVRGrabbable>().grabbedBy.ToString();
         if (handHoldingHammer == "AvatarGrabberRight (OVRGrabber)")
         {
@@ -89,21 +111,39 @@ public class IndicatorHitbox : MonoBehaviour
 
     void BadHitReaction(Collider other)
     {
-        Debug.Log("MissHitReaction");
+        //Debug.Log("BadHitReaction");
+        string handHoldingHammer = other.transform.parent.gameObject.GetComponent<OVRGrabbable>().grabbedBy.ToString();
+        if (handHoldingHammer == "AvatarGrabberRight (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(0.5f, 0.5f, 0.1f, OVRInput.Controller.RTouch);
+        }
+        else if (handHoldingHammer == "AvatarGrabberLeft (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(0.5f, 0.5f, 0.1f, OVRInput.Controller.LTouch);
+        }
         //GameManager.instance.AddBadHit();
         AudioManager.instance.PlayBadAnvilHit();
         greenIndicator.badHit = true;
-        GameObject hitInstance = GameObject.Instantiate(hitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+        GameObject hitInstance = GameObject.Instantiate(badHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
         hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
     }
 
     void EarlyHitReaction(Collider other)
     {
-        Debug.Log("MissHitReaction");
+        //Debug.Log("Ear;yHitReaction");
+        string handHoldingHammer = other.transform.parent.gameObject.GetComponent<OVRGrabbable>().grabbedBy.ToString();
+        if (handHoldingHammer == "AvatarGrabberRight (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(0.5f, 0.5f, 0.1f, OVRInput.Controller.RTouch);
+        }
+        else if (handHoldingHammer == "AvatarGrabberLeft (OVRGrabber)")
+        {
+            ControllerManager.CM.StartVibration(0.5f, 0.5f, 0.1f, OVRInput.Controller.LTouch);
+        }
         //GameManager.instance.AddBadHit();
         greenIndicator.badHit = true;
         AudioManager.instance.PlayBadAnvilHit();
-        GameObject hitInstance = GameObject.Instantiate(hitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+        GameObject hitInstance = GameObject.Instantiate(badHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
         hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
         yellowIndicator.RenderInert();
     }

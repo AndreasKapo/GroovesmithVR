@@ -42,7 +42,7 @@ public class MetalCollider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!isOnAnvil && (GetComponent<OVRGrabbable>().enabled && GetComponent<OVRGrabbable>().grabbedBy != null))
+		if(!isOnAnvil && (GetComponent<OVRGrabbable>().enabled && GetComponent<OVRGrabbable>().grabbedBy == null))
         {
             SetKinematic(false);
         }

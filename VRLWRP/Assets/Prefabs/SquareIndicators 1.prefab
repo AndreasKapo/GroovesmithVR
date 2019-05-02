@@ -161,7 +161,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yellowIndicator: {fileID: 1433662898837085592}
   greenIndicator: {fileID: 8553976283323426834}
-  hitParticle: {fileID: 1378907115465920, guid: 42a4458a65189f94186e287063e78754,
+  freeHitParticle: {fileID: 1378907115465920, guid: 42a4458a65189f94186e287063e78754,
+    type: 3}
+  hitParticle: {fileID: 5179513563402452148, guid: 4cfa9d95577719349a545e0471c1d43e,
+    type: 3}
+  badHitParticle: {fileID: 7369896494770255748, guid: f95f088975e4bcd46914bb57327c452f,
     type: 3}
   particleHeightDiff: {fileID: 11400000, guid: ca4e9c8e7654fd34db11862dfa2578dc, type: 2}
   hitCooldownTime: {fileID: 11400000, guid: 43b18ca9986f6b54b8ec7ba95d3b5c70, type: 2}
