@@ -23,9 +23,9 @@ MonoBehaviour:
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   mTracks:
-  - {fileID: 11400000, guid: 1ead79430948e8a4aa64a6492fa7b630, type: 2}
-  - {fileID: 11400000, guid: 1cf0d44876bf5a147b1c7e27e917225a, type: 2}
-  - {fileID: 11400000, guid: 6735030aad4a90b4a855ba3195c7de96, type: 2}
+  - {fileID: 11400000, guid: a4eeba4533d4fcd488eef8ac8da0efaf, type: 2}
+  - {fileID: 11400000, guid: e11da662bce58bd4ba0d0ff29df62735, type: 2}
+  - {fileID: 11400000, guid: 67aafef92c09ecf4e89729f90ad8eb07, type: 2}
   - {fileID: 11400000, guid: ef4bee1072ff5934bb65b3d248434923, type: 2}
   - {fileID: 11400000, guid: 96dbc5476cccfb744b7c87629816d28b, type: 2}
   - {fileID: 11400000, guid: 8f2f64257a0f40c42b16743ac5014427, type: 2}
