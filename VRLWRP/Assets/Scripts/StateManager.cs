@@ -43,6 +43,7 @@ public class StateManager : MonoBehaviour
         
 
         TransitionToAnvil();
+        PlayAnvil();
     }
 
     public void StartTransitionToAnvil()
@@ -96,4 +97,17 @@ public class StateManager : MonoBehaviour
         }
         
     }
+
+    void PlayAnvil()
+    {
+        if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
+        {
+            if(GameManager.instance.isFreeHit && (GameManager.instance.freeHitEndSampleTime < GameManager.instance.koreoGraphy.GetLatestSampleTime()))
+            {
+                GameManager.instance.StopFreeHit();
+            }
+        }
+    }
+
+   
 }

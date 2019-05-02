@@ -15,20 +15,33 @@ public class GameManager : MonoBehaviour {
     public int beatEventIndex;
 
     public List<IndicatorManager> indicatorManagers;
+
     public Koreography koreoGraphy;
+    public SwordBlend swordBlend;
 
     public int spawnEarlyInSeconds = 1;
     public bool isPlayingSong;
 
-    
+
+    public KoreographyEvent currentFreeHitEvent;
+    public bool isFreeHit = false;
+    public int freeHitEndSampleTime;
 
 
     public WorldState worldState;
+
 
     public int numBeats;
     public int numGoodHits;
     public int numBadHits;
     public int numMisses;
+
+    public int multiplier = 1;
+    public int multiplierCounter;
+    public int score;
+    
+
+    public int scorePerHit = 150;
     
     void Awake()
     {
@@ -68,13 +81,16 @@ public class GameManager : MonoBehaviour {
         smp = GetComponent<SimpleMusicPlayer>();
     }
 
-    public void SetKoreography(AudioClip clip, Koreography koreography)
+    public void SetKoreography(AudioClip clip, Koreography koreography, string songTitle)
     {
         numBeats = 0;
         numGoodHits = 0;
         numBadHits = 0;
         numMisses = 0;
         beatEventIndex = 0;
+        multiplierCounter = 0;
+        score = 0;
+        multiplier = 1;
 
         Koreographer.Instance.ClearEventRegister();
 
@@ -90,17 +106,14 @@ public class GameManager : MonoBehaviour {
         
         for(int i=0; i<indicatorManagers.Count; i++)
         {
-            if(koreography.GetTrackAtIndex(i).EventID != "Beats" && koreography.GetTrackAtIndex(i).EventID != "EndOfSong") { 
-                indicatorManagers[i].SetLaneEvents(koreography.GetTrackAtIndex(i));
-            }
-           
+            indicatorManagers[i].SetLaneEvents(koreography.GetTrackAtIndex(i));
+            numBeats += koreography.GetTrackAtIndex(i).GetAllEvents().Count;
         }
         for(int i =0; i < koreography.GetNumTracks(); i++)
         {
             if (koreography.GetTrackAtIndex(i).EventID == "Beats")
             {
                 beatEvents = koreography.GetTrackAtIndex(i).GetAllEvents();
-                numBeats += beatEvents.Count;
             }
         }
 
@@ -116,16 +129,21 @@ public class GameManager : MonoBehaviour {
 
         Koreographer.Instance.RegisterForEvents("EndOfSong", EndOfSong);
 
+        Koreographer.Instance.RegisterForEvents("FreeHit", StartFreeHit);
 
+    }
 
+    public void SetSwordBlend(SwordBlend swordBlend)
+    {
+        this.swordBlend = swordBlend;
     }
 
     //Reads through the beat events, checks four beats ahead to see if the next beat should be spawned
     public int GetNextBeatHitTime()
     {
-        if(beatEvents.Count >= (beatEventIndex + 3))
+        if(beatEvents.Count >= (beatEventIndex + 2))
         {
-            return beatEvents[beatEventIndex + 3].StartSample;
+            return beatEvents[beatEventIndex + 2].StartSample;
         } else
         {
             return beatEvents[beatEvents.Count-1].StartSample;
@@ -154,6 +172,25 @@ public class GameManager : MonoBehaviour {
         this.isPlayingSong = true;
     }
 
+    public void StartFreeHit(KoreographyEvent evt)
+    {
+        freeHitEndSampleTime = evt.EndSample;
+        isFreeHit = true;
+        foreach (IndicatorManager manager in indicatorManagers)
+        {
+            manager.StartFreeHit();
+        }
+    }
+
+    public void StopFreeHit()
+    {
+        isFreeHit = false;
+        foreach (IndicatorManager manager in indicatorManagers)
+        {
+            manager.StopFreeHit();
+        }
+    }
+
     public void EndSong()
     {
         foreach (IndicatorManager manager in indicatorManagers)
@@ -178,15 +215,55 @@ public class GameManager : MonoBehaviour {
     public void AddGoodHit()
     {
         this.numGoodHits++;
+        swordBlend.GoodHit(100f / numBeats);
+
+        multiplierCounter++;
+        CalculateMultiplier();
+
+        score += scorePerHit * multiplier;
     }
 
     public void AddBadHit()
     {
         this.numBadHits++;
+        swordBlend.BadHit(100f / numBeats);
+
+        multiplierCounter = 0;
+        CalculateMultiplier();
+
     }
 
     public void AddMiss()
     {
         this.numMisses++;
+        swordBlend.MissHit(100f / numBeats);
+
+        multiplierCounter = 0;
+        CalculateMultiplier();
     }
+
+    void CalculateMultiplier()
+    {
+
+        if (multiplierCounter > 30)
+        {
+            multiplier = 4;
+        }
+        else if (multiplierCounter > 20)
+        {
+            multiplier = 3;
+        }
+        else if (multiplierCounter > 10)
+        {
+            multiplier = 2;
+        }
+        else
+        {
+            multiplier = 1;
+        }
+    }
+
+    
+
+
 }

@@ -13,14 +13,20 @@ public class IndicatorManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
+        {
+            if (GameManager.instance.isFreeHit)
+            {
+
+            }
+        }
     }
 
     void CheckSpawnNext()
     {
         //
         int nextBeatSample = GameManager.instance.GetNextBeatHitTime();
-        if ((laneEvents[laneEventIndex].StartSample) <= nextBeatSample)
+        if (laneEventIndex < laneEvents.Count && (laneEvents[laneEventIndex].StartSample) <= nextBeatSample)
         {
             ActivateInitialIndicator();
             laneEventIndex++;
@@ -29,6 +35,8 @@ public class IndicatorManager : MonoBehaviour
 
     public void BeatIterate()
     {
+        
+
         //Debug.Log("BeatIterate " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
         bool foundActivated = false;
         for(int i= indicators.Length-1; i>=0; i--)
@@ -38,8 +46,14 @@ public class IndicatorManager : MonoBehaviour
                 if (indicators[i].activated)
                 {
                     foundActivated = true;
+                    if (!indicators[i].inert)
+                    {
+                        indicators[i + 1].Activate();
+                    } else if (indicators[i].inert)
+                    {
+                        indicators[i + 1].ActivateInert();
+                    }
                     indicators[i].DeActivate();
-                    indicators[i + 1].Activate();
                     //break;
                 }
             }
@@ -47,11 +61,14 @@ public class IndicatorManager : MonoBehaviour
             {
                 if (indicators[i].activated)
                 {
+                    
                     IndicatorDone(indicators[i].hitSuccess, indicators[i].badHit);
                     foundActivated = true;
                     indicators[i].DeActivate();
                     indicators[i].hitSuccess = false;
                     indicators[i].badHit = false;
+                    
+                    
                 }
             }
         }
@@ -97,6 +114,22 @@ public class IndicatorManager : MonoBehaviour
         for(int i=0; i<indicators.Length; i++)
         {
             indicators[i].DeActivate();
+        }
+    }
+
+    public void StartFreeHit()
+    {
+        for (int i = 0; i < indicators.Length; i++)
+        {
+            indicators[i].EnableFreeHit();
+        }
+    }
+
+    public void StopFreeHit()
+    {
+        for (int i = 0; i < indicators.Length; i++)
+        {
+            indicators[i].DisableFreeHit();
         }
     }
 }
