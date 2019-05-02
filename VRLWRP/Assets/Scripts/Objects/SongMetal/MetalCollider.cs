@@ -11,17 +11,21 @@ public class MetalCollider : MonoBehaviour {
 
     private void Awake()
     {
-        shortCollider.enabled = true;
-        longCollider.enabled = false;
+        EnableShortCollider();
         rb = GetComponent<Rigidbody>();
     }
     // Use this for initialization
-    
+
 
     public void EnableLongCollider()
     {
         shortCollider.enabled = false;
         longCollider.enabled = true;
+    }
+    public void EnableShortCollider()
+    {
+        shortCollider.enabled = true;
+        longCollider.enabled = false;
     }
 
     public void EnableGrabbable(bool grabbable)

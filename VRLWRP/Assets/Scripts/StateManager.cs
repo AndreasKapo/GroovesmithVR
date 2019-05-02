@@ -27,6 +27,14 @@ public class StateManager : MonoBehaviour
 
     TransitionToAnvilStates transitionToAnvilState;
 
+    enum TransitionFromAnvilToDefaultStates
+    {
+        None,
+        DimSpotLight,
+        BrightenDirectionalLight
+    }
+    TransitionFromAnvilToDefaultStates transitionFromAnvilToDefaultState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +44,15 @@ public class StateManager : MonoBehaviour
         
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+
 
         TransitionToAnvil();
+        TransitionFromAnvilToDefault();
         PlayAnvil();
     }
 
@@ -51,10 +61,57 @@ public class StateManager : MonoBehaviour
         GameManager.instance.worldState = WorldState.TransitioningToAnvil;
         timer = 0f;
 
-        directionalLightIntensity = directionalLight.GetComponent<Light>().intensity; 
+        directionalLightIntensity = directionalLight.GetComponent<Light>().intensity;
         spotLightIntensity = spotLight.GetComponent<Light>().intensity;
 
         transitionToAnvilState = TransitionToAnvilStates.DimDirectionalLight;
+    }
+    public void StartTransitionFromAnvilToDefault()
+    {
+        GameManager.instance.worldState = WorldState.TransitionFromAnvilToDefault;
+        timer = 0f;
+
+        directionalLightIntensity = directionalLight.GetComponent<Light>().intensity;
+        spotLightIntensity = spotLight.GetComponent<Light>().intensity;
+
+        transitionFromAnvilToDefaultState = TransitionFromAnvilToDefaultStates.DimSpotLight;
+    }
+
+    void TransitionFromAnvilToDefault()
+    {
+        if (GameManager.instance.worldState == WorldState.TransitionFromAnvilToDefault)
+        {
+            if (transitionFromAnvilToDefaultState == TransitionFromAnvilToDefaultStates.DimSpotLight)
+            {
+                timer += Time.deltaTime;
+
+                if (timer <= spotLightTransitionTime)
+                {
+                    spotLightIntensity = targetSpotLightIntensity - (targetSpotLightIntensity * (timer / spotLightTransitionTime));
+                    spotLight.GetComponent<Light>().intensity = spotLightIntensity;
+                }
+                else
+                {
+                    transitionFromAnvilToDefaultState = TransitionFromAnvilToDefaultStates.BrightenDirectionalLight;
+                    timer = 0f;
+                }
+            }
+            else if (transitionFromAnvilToDefaultState == TransitionFromAnvilToDefaultStates.BrightenDirectionalLight)
+            {
+                timer += Time.deltaTime;
+
+                if (timer <= directionalLightTransitionTime)
+                {
+                    directionalLightIntensity = targetDirectionalLightIntensity * (timer / directionalLightTransitionTime);
+                    directionalLight.GetComponent<Light>().intensity = directionalLightIntensity;
+                }
+                else
+                {
+                    GameManager.instance.worldState = WorldState.Default;
+                    timer = 0f;
+                }
+            }
+        }
     }
 
     public void TransitionToAnvil()
@@ -91,6 +148,7 @@ public class StateManager : MonoBehaviour
                 {
                     Debug.Log("Start Song event Risen");
                     startSongEvent.Raise();
+
                 }
             }
 

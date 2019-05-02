@@ -200,11 +200,13 @@ public class GameManager : MonoBehaviour {
         smp.StopAllCoroutines();
         smp.Stop();
         this.isPlayingSong = false;
+        endOfSongEvent.Raise();
     }
 
     public void EndOfSong(KoreographyEvent evt)
     {
-        endOfSongEvent.Raise();
+        EndSong();
+        //endOfSongEvent.Raise();
     }
 
     public int GetCurrentTime()
