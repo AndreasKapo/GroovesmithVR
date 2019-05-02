@@ -50,7 +50,7 @@ MonoBehaviour:
   inert: 0
   hitSuccess: 0
   badHit: 0
-  activatedMaterial: {fileID: 2100000, guid: 59bb84220f75dec47887f37c498a1756, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: ea5128bd01eb6544fa92a3d27f41cbb7, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
@@ -265,7 +265,7 @@ MonoBehaviour:
   inert: 0
   hitSuccess: 0
   badHit: 0
-  activatedMaterial: {fileID: 2100000, guid: 1e8a75a0d29e0db4687a73828e87bb3c, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 942ef8dfa492b014db4ec7571b9d1c30, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
@@ -370,7 +370,7 @@ MonoBehaviour:
   inert: 0
   hitSuccess: 0
   badHit: 0
-  activatedMaterial: {fileID: 2100000, guid: 81a848d98f5d2134792903db52284b0d, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 4a82d39ccff63a848bb798ae3e5d2943, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
@@ -529,7 +529,7 @@ MonoBehaviour:
   inert: 0
   hitSuccess: 0
   badHit: 0
-  activatedMaterial: {fileID: 2100000, guid: 37ad8508a0c4fe84890466d90d3c978c, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 864ce5eed8104bf45a758c6b6c178389, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
