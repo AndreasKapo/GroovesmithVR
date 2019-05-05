@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHitTransitioning: 0
   freeHit: 0
   inert: 0
   hitSuccess: 0
@@ -59,6 +60,8 @@ MonoBehaviour:
   freeHitColorMaterial2: {fileID: 2100000, guid: 7f238fb4a00777347b97a06797684282,
     type: 2}
   freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
+  freeHitTransitionTime: {fileID: 11400000, guid: 921d6264f84b4484fa4cd924c27d78b9,
     type: 2}
 --- !u!33 &269031159847089866
 MeshFilter:
@@ -265,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHitTransitioning: 0
   freeHit: 0
   inert: 0
   hitSuccess: 0
@@ -278,6 +282,8 @@ MonoBehaviour:
   freeHitColorMaterial2: {fileID: 2100000, guid: 7f238fb4a00777347b97a06797684282,
     type: 2}
   freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
+  freeHitTransitionTime: {fileID: 11400000, guid: 921d6264f84b4484fa4cd924c27d78b9,
     type: 2}
 --- !u!33 &8631714050656457794
 MeshFilter:
@@ -370,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHitTransitioning: 0
   freeHit: 0
   inert: 0
   hitSuccess: 0
@@ -383,6 +390,8 @@ MonoBehaviour:
   freeHitColorMaterial2: {fileID: 2100000, guid: 7f238fb4a00777347b97a06797684282,
     type: 2}
   freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
+  freeHitTransitionTime: {fileID: 11400000, guid: 921d6264f84b4484fa4cd924c27d78b9,
     type: 2}
 --- !u!33 &8192945925273276276
 MeshFilter:
@@ -529,6 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  freeHitTransitioning: 0
   freeHit: 0
   inert: 0
   hitSuccess: 0
@@ -542,6 +552,8 @@ MonoBehaviour:
   freeHitColorMaterial2: {fileID: 2100000, guid: 7f238fb4a00777347b97a06797684282,
     type: 2}
   freeHitPulseTransitionTime: {fileID: 11400000, guid: 86aa010291d021440912c0cf2fba293a,
+    type: 2}
+  freeHitTransitionTime: {fileID: 11400000, guid: 921d6264f84b4484fa4cd924c27d78b9,
     type: 2}
 --- !u!33 &8646061675095704785
 MeshFilter:

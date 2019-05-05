@@ -8,6 +8,7 @@ public class Indicator : MonoBehaviour
     
 
     public bool activated;
+    public bool freeHitTransitioning;
     public bool freeHit;
     public bool inert;
     public bool hitSuccess = false;
@@ -26,7 +27,8 @@ public class Indicator : MonoBehaviour
     float freeHitPulseTimer;
 
     public FloatVariable freeHitPulseTransitionTime;
-    
+    public FloatVariable freeHitTransitionTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +40,13 @@ public class Indicator : MonoBehaviour
     {
         if (freeHit)
         {
-            Pulse();
+            if (freeHitTransitioning)
+            {
+                FreeHitTransition();
+            } else
+            {
+                Pulse();
+            }
         }
     }
 
@@ -65,6 +73,12 @@ public class Indicator : MonoBehaviour
 
         freeHitMaterial.Lerp(freeHitColorMaterial1, freeHitColorMaterial2, freeHitPulseTimer);
 
+    }
+
+    void FreeHitTransition()
+    {
+        freeHitPulseTimer += Time.deltaTime * (1/ freeHitTransitionTime.Value);
+        freeHitMaterial.Lerp(freeHitColorMaterial1, inactiveMaterial, freeHitPulseTimer);
     }
 
 
@@ -115,14 +129,22 @@ public class Indicator : MonoBehaviour
     {
         
         freeHit = true;
+        freeHitTransitioning = false;
         //pulsingUp = true;
         GetComponent<Renderer>().material = freeHitMaterial;
         
     }
 
+    public void BeginFreeHitTransition()
+    {
+        freeHitTransitioning = true;
+        freeHitPulseTimer = 0f;
+    }
+
     public void DisableFreeHit()
     {
         freeHit = false;
+        freeHitTransitioning = false;
         DeActivate();
     }
 

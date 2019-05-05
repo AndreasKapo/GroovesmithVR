@@ -13,13 +13,7 @@ public class IndicatorManager : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
-        {
-            if (GameManager.instance.isFreeHit)
-            {
-
-            }
-        }
+        
     }
 
     void CheckSpawnNext()
@@ -122,6 +116,14 @@ public class IndicatorManager : MonoBehaviour
         for (int i = 0; i < indicators.Length; i++)
         {
             indicators[i].EnableFreeHit();
+        }
+    }
+
+    public void StartFreeHitTransition()
+    {
+        for (int i = 0; i < indicators.Length; i++)
+        {
+            indicators[i].BeginFreeHitTransition();
         }
     }
 

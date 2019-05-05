@@ -377,6 +377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LocalAvatarWithGrab
       objectReference: {fileID: 0}
+    - target: {fileID: 7614004214642827214, guid: f7d8e8ab3d9891f40a99da5e1fff1d4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7d8e8ab3d9891f40a99da5e1fff1d4f, type: 3}
 --- !u!1001 &277115300
@@ -483,7 +488,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.153
+      value: -2.552
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
@@ -493,7 +498,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 61.49
+      value: 61.4216
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
@@ -1966,7 +1971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833626182}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.452, y: 51.847, z: 61.479}
+  m_LocalPosition: {x: -2.965, y: 51.847, z: 61.273}
   m_LocalScale: {x: 0.7628674, y: 1.3731022, z: 0.60528994}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5365,7 +5370,11 @@ MonoBehaviour:
     mStartSample: 0
     mEndSample: 0
   isFreeHit: 0
+  isFreeHitTransitioning: 0
   freeHitEndSampleTime: 0
+  freehitTransitonSampleTime: 0
+  freeHitTransitionTime: {fileID: 11400000, guid: 921d6264f84b4484fa4cd924c27d78b9,
+    type: 2}
   worldState: 0
   numBeats: 0
   numGoodHits: 0
@@ -6003,12 +6012,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7073260300700153010, guid: 61b1f7de6d6f3544d847ddd0d6a19e9b,
-        type: 3}
-      propertyPath: badHitParticle
-      value: 
-      objectReference: {fileID: 7369896494770255748, guid: f95f088975e4bcd46914bb57327c452f,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b1f7de6d6f3544d847ddd0d6a19e9b, type: 3}
 --- !u!4 &6539047002614002377

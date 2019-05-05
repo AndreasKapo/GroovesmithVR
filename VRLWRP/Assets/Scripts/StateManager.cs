@@ -160,9 +160,17 @@ public class StateManager : MonoBehaviour
     {
         if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
         {
-            if(GameManager.instance.isFreeHit && (GameManager.instance.freeHitEndSampleTime < GameManager.instance.koreoGraphy.GetLatestSampleTime()))
-            {
-                GameManager.instance.StopFreeHit();
+            if(GameManager.instance.isFreeHit) {
+
+                Debug.Log("GameManager.instance.freehitTransitonSampleTime: " + GameManager.instance.freehitTransitonSampleTime);
+                Debug.Log("GameManager.instance.koreoGraphy.GetLatestSampleTime(): " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
+                if (GameManager.instance.freeHitEndSampleTime < GameManager.instance.koreoGraphy.GetLatestSampleTime())
+                {
+                    GameManager.instance.StopFreeHit();
+                } else if (GameManager.instance.freehitTransitonSampleTime < GameManager.instance.koreoGraphy.GetLatestSampleTime() && !GameManager.instance.isFreeHitTransitioning)
+                {
+                    GameManager.instance.StartFreeHitTransition();
+                }
             }
         }
     }

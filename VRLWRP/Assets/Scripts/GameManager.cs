@@ -25,7 +25,10 @@ public class GameManager : MonoBehaviour {
 
     public KoreographyEvent currentFreeHitEvent;
     public bool isFreeHit = false;
+    public bool isFreeHitTransitioning = false;
     public int freeHitEndSampleTime;
+    public int freehitTransitonSampleTime;
+    public FloatVariable freeHitTransitionTime;
 
 
     public WorldState worldState;
@@ -174,17 +177,33 @@ public class GameManager : MonoBehaviour {
 
     public void StartFreeHit(KoreographyEvent evt)
     {
-        freeHitEndSampleTime = evt.EndSample;
-        isFreeHit = true;
+        if (!isFreeHit)
+        {
+            freeHitEndSampleTime = evt.EndSample;
+            koreoGraphy.GetLatestSampleTime();
+            freehitTransitonSampleTime = freeHitEndSampleTime - (int)(freeHitTransitionTime.Value * koreoGraphy.SampleRate);
+            isFreeHit = true;
+            isFreeHitTransitioning = false;
+            foreach (IndicatorManager manager in indicatorManagers)
+            {
+                manager.StartFreeHit();
+            }
+        }
+    }
+
+    public void StartFreeHitTransition()
+    {
+        isFreeHitTransitioning = true;
         foreach (IndicatorManager manager in indicatorManagers)
         {
-            manager.StartFreeHit();
+            manager.StartFreeHitTransition();
         }
     }
 
     public void StopFreeHit()
     {
         isFreeHit = false;
+        isFreeHitTransitioning = false;
         foreach (IndicatorManager manager in indicatorManagers)
         {
             manager.StopFreeHit();
