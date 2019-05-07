@@ -11,6 +11,12 @@ public class IndicatorManager : MonoBehaviour
     int laneEventIndex = 0;
     int timeBeforeSpawn;
 
+    public Animation animator;
+
+    private void Start()
+    {
+    }
+
     private void Update()
     {
         
@@ -133,5 +139,15 @@ public class IndicatorManager : MonoBehaviour
         {
             indicators[i].DisableFreeHit();
         }
+    }
+
+    public void AnimateIn()
+    {
+        animator.Play("NodesTransitionIn");
+    }
+
+    public void AnimateOut()
+    {
+        animator.Play("NodesTransitionOut");
     }
 }
