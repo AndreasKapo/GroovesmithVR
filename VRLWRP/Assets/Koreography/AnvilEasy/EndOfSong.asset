@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: EndOfSong
   mEventList:
-  - mStartSample: 8937600
-    mEndSample: 8937600
+  - mStartSample: 8820000
+    mEndSample: 8820000
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
