@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour {
     private void Start()
     {
         smp = GetComponent<SimpleMusicPlayer>();
+        AudioManager.instance.PlayLobbyMusic();
     }
 
     public void SetKoreography(AudioClip clip, Koreography koreography, string songTitle)

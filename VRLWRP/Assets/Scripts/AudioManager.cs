@@ -10,6 +10,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] goodAnvilHits;
     public AudioClip[] badAnvilHits;
 
+    public AudioClip lobbyMusic;
+
+    public float lobbyMusicVolume;
+
+    public float goodAnvilHitVolume;
+    public float badAnvilHitVolume;
+
     AudioClip previousGoodAnvilHit;
     AudioClip previousBadAnvilHit;
 
@@ -52,6 +59,7 @@ public class AudioManager : MonoBehaviour
         } while (hitSound == previousGoodAnvilHit);
 
         previousGoodAnvilHit = hitSound;
+        audioSource.volume = goodAnvilHitVolume;
         PlaySound(hitSound);
     }
 
@@ -64,6 +72,7 @@ public class AudioManager : MonoBehaviour
         } while (hitSound == previousBadAnvilHit);
 
         previousBadAnvilHit = hitSound;
+        audioSource.volume = badAnvilHitVolume;
         PlaySound(hitSound);
     }
 
@@ -71,5 +80,16 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.Stop();
         audioSource.PlayOneShot(clip);
+    }
+
+    public void StopLobbyMusic()
+    {
+        audioSource.Stop();
+    }
+
+    public void PlayLobbyMusic()
+    {
+        audioSource.volume = lobbyMusicVolume;
+        PlaySound(lobbyMusic);
     }
 }
