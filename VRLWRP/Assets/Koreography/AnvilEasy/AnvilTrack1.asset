@@ -20,106 +20,102 @@ MonoBehaviour:
     mEndSample: 705600
   - mStartSample: 940800
     mEndSample: 940800
+  - mStartSample: 1087800
+    mEndSample: 1087800
   - mStartSample: 1205400
     mEndSample: 1205400
-  - mStartSample: 1440600
-    mEndSample: 1440600
+  - mStartSample: 1381800
+    mEndSample: 1381800
+  - mStartSample: 1499400
+    mEndSample: 1499400
   - mStartSample: 1617000
     mEndSample: 1617000
-  - mStartSample: 1764000
-    mEndSample: 1764000
-  - mStartSample: 1999200
-    mEndSample: 1999200
-  - mStartSample: 2116800
-    mEndSample: 2116800
+  - mStartSample: 1675800
+    mEndSample: 1675800
+  - mStartSample: 1793400
+    mEndSample: 1793400
+  - mStartSample: 1911000
+    mEndSample: 1911000
+  - mStartSample: 2028600
+    mEndSample: 2028600
+  - mStartSample: 2146200
+    mEndSample: 2146200
   - mStartSample: 2234400
     mEndSample: 2234400
-  - mStartSample: 2381400
-    mEndSample: 2381400
   - mStartSample: 2469600
     mEndSample: 2469600
-  - mStartSample: 2646000
-    mEndSample: 2646000
   - mStartSample: 2763600
     mEndSample: 2763600
   - mStartSample: 2998800
     mEndSample: 2998800
   - mStartSample: 3145800
     mEndSample: 3145800
-  - mStartSample: 3234000
-    mEndSample: 3234000
-  - mStartSample: 3322200
-    mEndSample: 3322200
   - mStartSample: 3410400
     mEndSample: 3410400
-  - mStartSample: 3528000
-    mEndSample: 3528000
   - mStartSample: 3645600
     mEndSample: 3645600
-  - mStartSample: 3792600
-    mEndSample: 3792600
+  - mStartSample: 3763200
+    mEndSample: 3763200
   - mStartSample: 3910200
     mEndSample: 3910200
-  - mStartSample: 4145400
-    mEndSample: 4145400
+  - mStartSample: 4027800
+    mEndSample: 4027800
+  - mStartSample: 4116000
+    mEndSample: 4116000
+  - mStartSample: 4233600
+    mEndSample: 4233600
   - mStartSample: 4351200
     mEndSample: 4351200
-  - mStartSample: 5203800
-    mEndSample: 5203800
-  - mStartSample: 5409600
-    mEndSample: 5409600
+  - mStartSample: 5056800
+    mEndSample: 5056800
+  - mStartSample: 5174400
+    mEndSample: 5174400
+  - mStartSample: 5321400
+    mEndSample: 5321400
+  - mStartSample: 5439000
+    mEndSample: 5439000
+  - mStartSample: 5527200
+    mEndSample: 5527200
   - mStartSample: 5644800
     mEndSample: 5644800
-  - mStartSample: 5791800
-    mEndSample: 5791800
-  - mStartSample: 5997600
-    mEndSample: 5997600
-  - mStartSample: 6085800
-    mEndSample: 6085800
+  - mStartSample: 5850600
+    mEndSample: 5850600
+  - mStartSample: 6027000
+    mEndSample: 6027000
+  - mStartSample: 6144600
+    mEndSample: 6144600
   - mStartSample: 6232800
     mEndSample: 6232800
+  - mStartSample: 6350400
+    mEndSample: 6350400
   - mStartSample: 6468000
     mEndSample: 6468000
   - mStartSample: 6585600
     mEndSample: 6585600
-  - mStartSample: 6703200
-    mEndSample: 6703200
-  - mStartSample: 6850200
-    mEndSample: 6850200
   - mStartSample: 7056000
     mEndSample: 7056000
   - mStartSample: 7173600
     mEndSample: 7173600
   - mStartSample: 7291200
     mEndSample: 7291200
-  - mStartSample: 7438200
-    mEndSample: 7438200
+  - mStartSample: 7408800
+    mEndSample: 7408800
   - mStartSample: 7526400
     mEndSample: 7526400
-  - mStartSample: 7614600
-    mEndSample: 7614600
-  - mStartSample: 7702800
-    mEndSample: 7702800
-  - mStartSample: 7791000
-    mEndSample: 7791000
-  - mStartSample: 7879200
-    mEndSample: 7879200
-  - mStartSample: 7967400
-    mEndSample: 7967400
+  - mStartSample: 7644000
+    mEndSample: 7644000
+  - mStartSample: 7761600
+    mEndSample: 7761600
+  - mStartSample: 7938000
+    mEndSample: 7938000
   - mStartSample: 8055600
     mEndSample: 8055600
-  - mStartSample: 8143800
-    mEndSample: 8143800
-  - mStartSample: 8232000
-    mEndSample: 8232000
-  - mStartSample: 8320200
-    mEndSample: 8320200
+  - mStartSample: 8202600
+    mEndSample: 8202600
+  - mStartSample: 8290800
+    mEndSample: 8290800
   - mStartSample: 8408400
     mEndSample: 8408400
-  - mStartSample: 8496600
-    mEndSample: 8496600
-  - mStartSample: 8614200
-    mEndSample: 8614200
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
