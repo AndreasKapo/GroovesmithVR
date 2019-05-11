@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleCreator : MonoBehaviour
+public class ParticlePlayer : MonoBehaviour
 {
 
-    public GameObject particle;
+    public ParticleSystem[] particleSystems;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +18,11 @@ public class ParticleCreator : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void PlayParticles()
     {
-        if(other.tag == "HammerHead")
+        foreach(ParticleSystem particleSystem in particleSystems)
         {
-            GameObject.Instantiate(particle, transform.position, Quaternion.identity);
+            particleSystem.Play();
         }
     }
 }

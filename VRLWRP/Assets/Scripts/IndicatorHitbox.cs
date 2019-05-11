@@ -89,8 +89,11 @@ public class IndicatorHitbox : MonoBehaviour
         catch (System.NullReferenceException e) { }
         if (GameManager.instance.playParticles)
         {
-            GameObject hitInstance = GameObject.Instantiate(freeHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            //GameObject hitInstance = GameObject.Instantiate(freeHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            GameObject hitInstance = ParticleManager.instance.GetFreeHitParticle();
+            hitInstance.transform.position = other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0);
             hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
+            hitInstance.GetComponent<ParticleSystem>().Play();
         }
         //hitInstance.transform.LookAt(playerCamera);
         greenIndicator.hitSuccess = true;
@@ -116,8 +119,11 @@ public class IndicatorHitbox : MonoBehaviour
         catch (System.NullReferenceException e) { }
         if (GameManager.instance.playParticles)
         {
-            GameObject hitInstance = GameObject.Instantiate(hitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            //GameObject hitInstance = GameObject.Instantiate(freeHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            GameObject hitInstance = ParticleManager.instance.GetGoodHitParticle();
+            hitInstance.transform.position = other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0);
             hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
+            hitInstance.GetComponent<ParticleSystem>().Play();
         }
         //hitInstance.transform.LookAt(playerCamera);
         greenIndicator.hitSuccess = true;
@@ -146,8 +152,11 @@ public class IndicatorHitbox : MonoBehaviour
         greenIndicator.badHit = true;
         if (GameManager.instance.playParticles)
         {
-            GameObject hitInstance = GameObject.Instantiate(badHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            //GameObject hitInstance = GameObject.Instantiate(freeHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            GameObject hitInstance = ParticleManager.instance.GetBadHitParticle();
+            hitInstance.transform.position = other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0);
             hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
+            hitInstance.GetComponent<ParticleSystem>().Play();
         }
     }
 
@@ -172,8 +181,11 @@ public class IndicatorHitbox : MonoBehaviour
         AudioManager.instance.PlayBadAnvilHit();
         if (GameManager.instance.playParticles)
         {
-            GameObject hitInstance = GameObject.Instantiate(badHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            //GameObject hitInstance = GameObject.Instantiate(freeHitParticle, other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0), Quaternion.identity);
+            GameObject hitInstance = ParticleManager.instance.GetBadHitParticle();
+            hitInstance.transform.position = other.ClosestPointOnBounds(transform.position) + new Vector3(0, particleHeightDiff.Value, 0);
             hitInstance.transform.rotation = Quaternion.LookRotation(transform.up, Vector3.up);
+            hitInstance.GetComponent<ParticleSystem>().Play();
         }
         yellowIndicator.RenderInert();
     }
