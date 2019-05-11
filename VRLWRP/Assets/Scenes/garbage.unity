@@ -921,17 +921,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.756
+      value: -1.612
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 51.68
+      value: 51.744
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 61.487
+      value: 61.5112
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
@@ -972,6 +972,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.62935936
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0210238
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: a93e10178f6d3de43b5ca0ac4265fb73,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9162094
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: a93e10178f6d3de43b5ca0ac4265fb73,
         type: 3}
@@ -2759,18 +2774,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodAnvilHits:
   - {fileID: 8300000, guid: 77058172d9cf85c48840d21965df1944, type: 3}
-  - {fileID: 8300000, guid: e39424a8fb0d4314bb16442b461dea4e, type: 3}
-  - {fileID: 8300000, guid: d05155d961e69644aadbe3463cea81e9, type: 3}
-  - {fileID: 8300000, guid: 77b9d9661ef4d694dbc7a816ad4dcdc2, type: 3}
-  - {fileID: 8300000, guid: 5e324542e8860c74596c7ebab0fa7ae1, type: 3}
   badAnvilHits:
   - {fileID: 8300000, guid: eb1edff9c57872b4b923fe93add2ea69, type: 3}
-  - {fileID: 8300000, guid: 8ab772320074561449461822505dbd20, type: 3}
-  - {fileID: 8300000, guid: 8313d2b15ce983e47b156a5c6b2b3559, type: 3}
-  - {fileID: 8300000, guid: 5165e9c8afe32ce4fb142723ba261a24, type: 3}
-  - {fileID: 8300000, guid: e91170c6905cd5547ab9e1369e0af23b, type: 3}
-  - {fileID: 8300000, guid: 6f7d0cef9e0fc244a8d0ccfcd1860ce7, type: 3}
-  - {fileID: 8300000, guid: c24ad9ae85976b0498414e913ae66257, type: 3}
   lobbyMusic: {fileID: 8300000, guid: b878142767ad9474ab851cfcb6c851c2, type: 3}
   lobbyMusicVolume: 0.05
   goodAnvilHitVolume: 0.8
@@ -4557,7 +4562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 70789f0e495eefb4c8d6bf351172692d, type: 3}
   koreography: {fileID: 11400000, guid: 834436ffc828b164680f36c243b1d506, type: 2}
-  songTitle: Avil1_Easy
+  songTitle: Avil1_Hard
 --- !u!95 &1833626190
 Animator:
   serializedVersion: 3
@@ -5491,9 +5496,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4400839638093921567}
-  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.2358017, y: -0.5, z: -0.091}
-  m_LocalScale: {x: 1.6046304, y: 7.368992, z: 7.658238}
+  m_LocalRotation: {x: -0.7071069, y: -2.3283064e-10, z: 5.968436e-10, w: 0.70710677}
+  m_LocalPosition: {x: 0.0118, y: -0.5, z: 0.378}
+  m_LocalScale: {x: 1.604629, y: 7.3690042, z: 7.6582484}
   m_Children: []
   m_Father: {fileID: 4400839639154607484}
   m_RootOrder: 0
@@ -6704,8 +6709,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4400839639154607485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01986, y: 0.0866, z: -0}
-  m_LocalScale: {x: 0.22144864, y: 0.078280486, z: 0.11402632}
+  m_LocalPosition: {x: -0.00688, y: 0.0524, z: 0.02265}
+  m_LocalScale: {x: 0.22144864, y: 0.009909896, z: 0.15919647}
   m_Children:
   - {fileID: 4400839638093921566}
   m_Father: {fileID: 4400839639629275818}
@@ -8122,6 +8127,7 @@ MonoBehaviour:
   multiplierCounter: 0
   score: 0
   scorePerHit: 150
+  freeHitScorePerHit: 10
   playParticles: 1
 --- !u!114 &4400839639783339079
 MonoBehaviour:

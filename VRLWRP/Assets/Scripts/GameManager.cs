@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour {
     
 
     public int scorePerHit = 150;
+    public int freeHitScorePerHit;
 
     public bool playParticles;
     
@@ -264,6 +265,11 @@ public class GameManager : MonoBehaviour {
 
         multiplierCounter = 0;
         CalculateMultiplier();
+    }
+
+    public void AddFreeHit()
+    {
+        score += freeHitScorePerHit;
     }
 
     void CalculateMultiplier()

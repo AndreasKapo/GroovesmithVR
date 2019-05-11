@@ -98,6 +98,7 @@ public class IndicatorHitbox : MonoBehaviour
         //hitInstance.transform.LookAt(playerCamera);
         greenIndicator.hitSuccess = true;
         AudioManager.instance.PlayGoodAnvilHit();
+        GameManager.instance.AddFreeHit();
     }
 
         void GoodHitReaction(Collider other)

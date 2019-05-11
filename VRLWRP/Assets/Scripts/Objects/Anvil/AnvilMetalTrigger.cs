@@ -30,7 +30,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle)
+        if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle && other.GetComponent<OVRGrabbable>().isGrabbed)
         {
             hasMetal = false;
             if (GameManager.instance.isPlayingSong)
