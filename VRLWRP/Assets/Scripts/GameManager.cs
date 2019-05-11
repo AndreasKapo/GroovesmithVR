@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour {
     
 
     public int scorePerHit = 150;
+
+    public bool playParticles;
     
     void Awake()
     {
