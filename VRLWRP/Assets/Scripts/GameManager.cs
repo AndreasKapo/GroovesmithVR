@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 
     public List<KoreographyEvent> beatEvents;
     public int beatEventIndex;
-    int endOfSongTime;
+    public int endOfSongTime;
 
     public List<IndicatorManager> indicatorManagers;
 

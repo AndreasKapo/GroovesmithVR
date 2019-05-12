@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TimerUI : MonoBehaviour
 {
     Text text;
+    public Image circleImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,8 @@ public class TimerUI : MonoBehaviour
     {
         if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
         {
-            text.text = "" + GameManager.instance.GetTimeLeftInSong();
+            text.text = "" + GameManager.instance.GetTimeLeftInSong() + "s";
+            circleImage.fillAmount = 1 - ((float)GameManager.instance.koreoGraphy.GetLatestSampleTime() / (float)GameManager.instance.endOfSongTime);
         }
     }
 }
