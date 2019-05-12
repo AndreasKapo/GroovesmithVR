@@ -34,12 +34,12 @@ public class ScoreUI : MonoBehaviour
         numBadHits = GameManager.instance.numBadHits;
         numMisses = GameManager.instance.numMisses;
 
-
+        /*
         string textString = "numBeats: " + numBeats;
         textString += "\n numGoodHits: " + numGoodHits;
         textString += "\n numBadHits: " + numBadHits;
         textString += "\n numMisses: " + numMisses;
-
+        */
         /*
         blendOne = GameManager.instance.swordBlend.blendOne;
         blendTwo = GameManager.instance.swordBlend.blendTwo;
@@ -49,7 +49,7 @@ public class ScoreUI : MonoBehaviour
         textString += "\n blendOne: " + blendOne;
         textString += "\n blendTwo: " + blendTwo;
         textString += "\n blendThree: " + blendThree;*/
-
+        /*
         multiplierCounter = GameManager.instance.multiplierCounter;
         multiplier = GameManager.instance.multiplier;
         score = GameManager.instance.score;
@@ -58,7 +58,8 @@ public class ScoreUI : MonoBehaviour
         textString += "\n multiplierCounter: " + multiplierCounter;
         textString += "\n multiplier: " + multiplier;
         textString += "\n score: " + score; 
-
+        */
+        string textString = "" + GameManager.instance.score;
          text.text = textString;
     }
 

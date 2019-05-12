@@ -53,10 +53,10 @@ public class AudioManager : MonoBehaviour
     public void PlayGoodAnvilHit()
     {
         AudioClip hitSound;
-        do
-        {
+       // do
+       // {
             hitSound = goodAnvilHits[Random.Range(0, goodAnvilHits.Length - 1)];
-        } while (hitSound == previousGoodAnvilHit);
+       // } while (hitSound == previousGoodAnvilHit);
 
         previousGoodAnvilHit = hitSound;
         audioSource.volume = goodAnvilHitVolume;
@@ -66,10 +66,10 @@ public class AudioManager : MonoBehaviour
     public void PlayBadAnvilHit()
     {
         AudioClip hitSound;
-        do
-        {
+       // do
+       // {
             hitSound = badAnvilHits[Random.Range(0, badAnvilHits.Length - 1)];
-        } while (hitSound == previousBadAnvilHit);
+       // } while (hitSound == previousBadAnvilHit);
 
         previousBadAnvilHit = hitSound;
         audioSource.volume = badAnvilHitVolume;

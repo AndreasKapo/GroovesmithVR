@@ -5,7 +5,10 @@ using UnityEngine;
 public class AnvilMetalTrigger : MonoBehaviour {
 
     public Transform metalSongLocation;
+    public Transform trophySpawnLocation;
     public GameEvent beginAnvilTransition;
+
+    public GameObject trophyPrefab;
 
     SongMetal songMetal;
     MetalCollider metalCollider;
@@ -30,7 +33,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle)
+        if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle && other.GetComponent<OVRGrabbable>().isGrabbed)
         {
             hasMetal = false;
             if (GameManager.instance.isPlayingSong)
@@ -42,7 +45,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "HammerHead" && GameManager.instance.worldState == WorldState.Default)
+        if(other.tag == "HammerHead" && hasMetal && GameManager.instance.worldState == WorldState.Default)
         {
             beginAnvilTransition.Raise();
         }
@@ -51,5 +54,10 @@ public class AnvilMetalTrigger : MonoBehaviour {
     public void EnableMetalColliderLongCollider()
     {
         //metalCollider.EnableLongCollider();
+    }
+
+    public void SpawnTrophy()
+    {
+        GameObject.Instantiate(trophyPrefab, trophySpawnLocation.position, trophyPrefab.transform.rotation);
     }
 }

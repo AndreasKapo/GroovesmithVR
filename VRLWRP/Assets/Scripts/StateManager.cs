@@ -15,6 +15,7 @@ public class StateManager : MonoBehaviour
     public float spotLightTransitionTime;
 
     public GameEvent startSongEvent;
+    public GameEvent pitchBlackTransitionToDefault;
 
     float timer = 0f;
 
@@ -98,6 +99,11 @@ public class StateManager : MonoBehaviour
             }
             else if (transitionFromAnvilToDefaultState == TransitionFromAnvilToDefaultStates.BrightenDirectionalLight)
             {
+                if (!SongUI.instance.objectsHidden)
+                {
+                    pitchBlackTransitionToDefault.Raise();
+                    SongUI.instance.HideUIObjects();
+                }
                 timer += Time.deltaTime;
 
                 if (timer <= directionalLightTransitionTime)
@@ -136,7 +142,10 @@ public class StateManager : MonoBehaviour
             }
             else if (transitionToAnvilState == TransitionToAnvilStates.BrightenSpotLight)
             {
-
+                if (SongUI.instance.objectsHidden)
+                {
+                    SongUI.instance.ShowUIObjects();
+                }
                 timer += Time.deltaTime;
 
                 if (timer <= spotLightTransitionTime)
