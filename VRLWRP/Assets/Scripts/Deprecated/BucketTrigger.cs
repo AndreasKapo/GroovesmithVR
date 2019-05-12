@@ -21,13 +21,13 @@ public class BucketTrigger : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "HammerHead")
+        if(other.tag == hammerPrefab.tag)
         {
             Collider[] results = Physics.OverlapSphere(transform.position, hammerCheckRadius);
             int numHammerHead = 0;
             foreach(Collider result in results)
             {
-                if(result.tag == "HammerHead")
+                if(result.tag == hammerPrefab.tag)
                 {
                     numHammerHead++;
                 }
