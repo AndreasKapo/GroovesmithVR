@@ -153,8 +153,8 @@ GameObject:
   - component: {fileID: 3454324708002141577}
   - component: {fileID: 3362243187393938491}
   m_Layer: 0
-  m_Name: HammerHandle 1 1
-  m_TagString: Untagged
+  m_Name: HammerHandle2
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3402352115484027823}
-  m_LocalRotation: {x: -0.04473958, y: 0.7065649, z: -0.7000575, w: -0.093188204}
+  m_LocalRotation: {x: -0.044734452, y: 0.7065654, z: -0.70005757, w: -0.093186}
   m_LocalPosition: {x: -0.903, y: 2.387, z: 2.747}
   m_LocalScale: {x: 0.040759083, y: 0.3495671, z: 0.03893743}
   m_Children:
@@ -306,6 +306,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3404307091632075617}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: ad412b7e0639779478f9e7fa4be3edd2,
+        type: 3}
+      propertyPath: m_Name
+      value: hammerv2_rescale
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ad412b7e0639779478f9e7fa4be3edd2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -363,6 +368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ad412b7e0639779478f9e7fa4be3edd2,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 52.828434
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ad412b7e0639779478f9e7fa4be3edd2,
+        type: 3}
       propertyPath: m_LocalScale.y
       value: 7.324999
       objectReference: {fileID: 0}
@@ -370,21 +380,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 56.98079
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: ad412b7e0639779478f9e7fa4be3edd2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 52.828434
-      objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: ad412b7e0639779478f9e7fa4be3edd2,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: ad412b7e0639779478f9e7fa4be3edd2,
-        type: 3}
-      propertyPath: m_Name
-      value: hammerv2_rescale
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad412b7e0639779478f9e7fa4be3edd2, type: 3}
