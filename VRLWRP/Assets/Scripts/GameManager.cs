@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 
     public List<KoreographyEvent> beatEvents;
     public int beatEventIndex;
+    int endOfSongTime;
 
     public List<IndicatorManager> indicatorManagers;
 
@@ -121,6 +122,9 @@ public class GameManager : MonoBehaviour {
             if (koreography.GetTrackAtIndex(i).EventID == "Beats")
             {
                 beatEvents = koreography.GetTrackAtIndex(i).GetAllEvents();
+            } else if(koreography.GetTrackAtIndex(i).EventID == "EndOfSong")
+            {
+                endOfSongTime = koreography.GetTrackAtIndex(i).GetAllEvents()[0].StartSample;
             }
         }
 
@@ -293,7 +297,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    
+    public int GetTimeLeftInSong()
+    {
+        int timeLeftInSong = (endOfSongTime - koreoGraphy.GetLatestSampleTime())/(koreoGraphy.SampleRate);
+        return timeLeftInSong;
+    }
 
 
 }
