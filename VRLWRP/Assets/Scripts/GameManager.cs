@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
     public int freeHitScorePerHit;
 
     public bool playParticles;
+
     
     void Awake()
     {
