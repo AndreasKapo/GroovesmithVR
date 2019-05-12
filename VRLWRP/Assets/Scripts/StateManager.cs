@@ -15,6 +15,7 @@ public class StateManager : MonoBehaviour
     public float spotLightTransitionTime;
 
     public GameEvent startSongEvent;
+    public GameEvent pitchBlackTransitionToDefault;
 
     float timer = 0f;
 
@@ -100,6 +101,7 @@ public class StateManager : MonoBehaviour
             {
                 if (!SongUI.instance.objectsHidden)
                 {
+                    pitchBlackTransitionToDefault.Raise();
                     SongUI.instance.HideUIObjects();
                 }
                 timer += Time.deltaTime;

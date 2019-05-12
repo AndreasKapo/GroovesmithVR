@@ -5,7 +5,10 @@ using UnityEngine;
 public class AnvilMetalTrigger : MonoBehaviour {
 
     public Transform metalSongLocation;
+    public Transform trophySpawnLocation;
     public GameEvent beginAnvilTransition;
+
+    public GameObject trophyPrefab;
 
     SongMetal songMetal;
     MetalCollider metalCollider;
@@ -51,5 +54,10 @@ public class AnvilMetalTrigger : MonoBehaviour {
     public void EnableMetalColliderLongCollider()
     {
         //metalCollider.EnableLongCollider();
+    }
+
+    public void SpawnTrophy()
+    {
+        GameObject.Instantiate(trophyPrefab, trophySpawnLocation.position, trophyPrefab.transform.rotation);
     }
 }
