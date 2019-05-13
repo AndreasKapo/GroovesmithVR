@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class TrophyCreation : MonoBehaviour
@@ -10,11 +11,32 @@ public class TrophyCreation : MonoBehaviour
     public TextMeshProUGUI breakdownText1;
     public TextMeshProUGUI breakdownText2;
 
+    public GameObject targetRenderPlane;
+    public Text renderTextScore;
+
+    public bool useTextMesh;
+    public bool useTargetRender;
+
     // Start is called before the first frame update
     void Start()
     {
-        WriteScore();
-        WriteBreakdown();
+        if (useTextMesh)
+        {
+            WriteScoreTextMesh();
+            WriteBreakdown();
+        } else
+        {
+            MakeTextMeshEmpty();
+        }
+
+        if (useTargetRender)
+        {
+            WriteScoreTargetRender();
+        }
+        else
+        {
+            DestroyTargetRender();
+        }
     }
 
     // Update is called once per frame
@@ -23,9 +45,26 @@ public class TrophyCreation : MonoBehaviour
         
     }
 
-    void WriteScore()
+    void DestroyTargetRender()
+    {
+        Destroy(targetRenderPlane);
+    }
+
+    void MakeTextMeshEmpty()
+    {
+        Destroy(scoreText.gameObject);
+        Destroy(breakdownText1.gameObject);
+        Destroy(breakdownText2.gameObject);
+    }
+
+    void WriteScoreTextMesh()
     {
         scoreText.text = "Score: " + GameManager.instance.score;
+    }
+
+    void WriteScoreTargetRender()
+    {
+        GameObject.Find("TargetRenderScoreText").GetComponent<Text>().text = "" + GameManager.instance.score;
     }
 
     void WriteBreakdown()
