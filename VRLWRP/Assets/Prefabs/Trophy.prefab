@@ -823,9 +823,10 @@ MonoBehaviour:
   scoreText: {fileID: 4795765491635069223}
   breakdownText1: {fileID: 4206517233282212208}
   breakdownText2: {fileID: 3838153446637110300}
-  targetRenderPlane: {fileID: 0}
+  targetRenderPlane: {fileID: 9065265962479672264}
+  renderTextScore: {fileID: 0}
   useTextMesh: 0
-  useTargetRender: 0
+  useTargetRender: 1
 --- !u!33 &2222858916289579721
 MeshFilter:
   m_ObjectHideFlags: 0
