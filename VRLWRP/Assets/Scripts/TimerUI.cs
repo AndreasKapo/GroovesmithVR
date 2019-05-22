@@ -18,7 +18,7 @@ public class TimerUI : MonoBehaviour
     {
         if(GameManager.instance.worldState == WorldState.PlayingAnvilSong)
         {
-            text.text = "" + GameManager.instance.GetTimeLeftInSong() + "s";
+            text.text = "" + GameManager.instance.GetTimeLeftInSong() + "s \n" + GameManager.instance.koreoGraphy.GetLatestSampleTime();
             circleImage.fillAmount = 1 - ((float)GameManager.instance.koreoGraphy.GetLatestSampleTime() / (float)GameManager.instance.endOfSongTime);
         }
     }

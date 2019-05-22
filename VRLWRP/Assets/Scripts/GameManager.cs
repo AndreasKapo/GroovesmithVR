@@ -69,6 +69,8 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+    
+
     public int SampleRate
     {
         get
@@ -86,6 +88,11 @@ public class GameManager : MonoBehaviour {
 
     private void Start()
     {
+        
+        GameObject localAvatar = GameObject.Find("LocalAvatarWithGrab");
+        localAvatar.SetActive(false);
+        localAvatar.SetActive(true);
+
         smp = GetComponent<SimpleMusicPlayer>();
         AudioManager.instance.PlayLobbyMusic();
     }
@@ -221,6 +228,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndSong()
     {
+        
         foreach (IndicatorManager manager in indicatorManagers)
         {
             manager.DeactivateAllIndicators();

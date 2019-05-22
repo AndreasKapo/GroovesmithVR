@@ -35,6 +35,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
     {
         if(other.tag == "SongMetal" && other.GetComponent<SongMetal>().songTitle == songMetal.songTitle && other.GetComponent<OVRGrabbable>().isGrabbed)
         {
+            EnableMetalColliderLongCollider();
             hasMetal = false;
             if (GameManager.instance.isPlayingSong)
             {
@@ -53,7 +54,10 @@ public class AnvilMetalTrigger : MonoBehaviour {
 
     public void EnableMetalColliderLongCollider()
     {
-        //metalCollider.EnableLongCollider();
+        if (hasMetal)
+        {
+            //metalCollider.EnableLongCollider();
+        }
     }
 
     public void SpawnTrophy()

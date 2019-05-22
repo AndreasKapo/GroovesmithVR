@@ -31,10 +31,15 @@ public class IndicatorManager : MonoBehaviour
     {
         
 
-        //Debug.Log("BeatIterate " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
+        Debug.Log("BeatIterate " + gameObject.name + " " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
+        
+
+       
         bool foundActivated = false;
         for(int i= indicators.Length-1; i>=0; i--)
         {
+            Debug.Log(gameObject.name + " : indicators[" + i + "].activated" + indicators[i].activated);
+            Debug.Log(gameObject.name + " : indicators[" + i + "].inert" + indicators[i].inert);
             if (i != indicators.Length - 1)
             {
                 if (indicators[i].activated)
