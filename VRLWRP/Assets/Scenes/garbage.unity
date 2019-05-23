@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1031,6 +1031,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_LowPoly
       objectReference: {fileID: 0}
+    - target: {fileID: 7893593575174067667, guid: 2459b65bd67b42e448e0fa6fdd933538,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2459b65bd67b42e448e0fa6fdd933538,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1850,6 +1855,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Forge_LowPoly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893593575174067667, guid: 6b2a7902d7179944d862096a6ec2658e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5682030893606045339, guid: 6b2a7902d7179944d862096a6ec2658e,
         type: 3}
@@ -5597,7 +5607,7 @@ PrefabInstance:
     - target: {fileID: 8250694544873448449, guid: 7cd7dc2bed6071341a3233cfeb591f16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5616037
+      value: -3.606
       objectReference: {fileID: 0}
     - target: {fileID: 8250694544873448449, guid: 7cd7dc2bed6071341a3233cfeb591f16,
         type: 3}
@@ -5607,7 +5617,7 @@ PrefabInstance:
     - target: {fileID: 8250694544873448449, guid: 7cd7dc2bed6071341a3233cfeb591f16,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 61.973736
+      value: 63.104
       objectReference: {fileID: 0}
     - target: {fileID: 8250694544873448449, guid: 7cd7dc2bed6071341a3233cfeb591f16,
         type: 3}
@@ -8998,6 +9008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66dc57fbd932e5043a48e07e946c3e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beatLeewayTime: 2000
+  beatLeewayDebugWarningTime: 20000
   beatHit: {fileID: 11400000, guid: 287e3055bb9f5c748aba7b6d6241c0f1, type: 2}
   endOfSongEvent: {fileID: 11400000, guid: f73bc19c92560c44cb2dccb7b3f01d26, type: 2}
   beatEvents: []

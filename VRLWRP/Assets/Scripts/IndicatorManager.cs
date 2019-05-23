@@ -31,7 +31,7 @@ public class IndicatorManager : MonoBehaviour
     {
         
 
-        //Debug.Log("BeatIterate " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
+        Debug.Log("BeatIterate " + GameManager.instance.koreoGraphy.GetLatestSampleTime());
         bool foundActivated = false;
         for(int i= indicators.Length-1; i>=0; i--)
         {
