@@ -7,6 +7,10 @@ using SonicBloom.Koreo.Players;
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
+    public int beatLeewayTime = 300;
+    public int beatLeewayDebugWarningTime = 20000;
+    int previousSampleTime;
+
     public GameEvent beatHit;
     public GameEvent endOfSongEvent;
     SimpleMusicPlayer smp;
@@ -177,18 +181,31 @@ public class GameManager : MonoBehaviour {
 
     public void OnBeatHit(KoreographyEvent evt)
     {
-        beatHit.Raise();
-        beatEventIndex++;
-        foreach (IndicatorManager manager in indicatorManagers)
+        if(previousSampleTime == 0 || (koreoGraphy.GetLatestSampleTime() > (previousSampleTime + beatLeewayTime)))
         {
-            manager.BeatIterate();
+            if (previousSampleTime != 0 && koreoGraphy.GetLatestSampleTime() < (previousSampleTime + beatLeewayDebugWarningTime)) {
+                Debug.LogWarning("Possible double beat warning! Current sample time: " + koreoGraphy.GetLatestSampleTime() + " Previous sample time: " + previousSampleTime);
+            }
+            previousSampleTime = koreoGraphy.GetLatestSampleTime();
+            beatHit.Raise();
+            beatEventIndex++;
+            foreach (IndicatorManager manager in indicatorManagers)
+            {
+                manager.BeatIterate();
+            }
+        } else
+        {
+            Debug.LogWarning("Double beat event found! Current sample time: " + koreoGraphy.GetLatestSampleTime() + " Previous sample time: " + previousSampleTime);
         }
+        
     }
 
     public void StartSong()
     {
         worldState = WorldState.PlayingAnvilSong;
         this.isPlayingSong = true;
+
+        previousSampleTime = 0;
     }
 
     public void StartFreeHit(KoreographyEvent evt)

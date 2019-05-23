@@ -38,8 +38,8 @@ public class IndicatorManager : MonoBehaviour
         bool foundActivated = false;
         for(int i= indicators.Length-1; i>=0; i--)
         {
-            Debug.Log(gameObject.name + " : indicators[" + i + "].activated" + indicators[i].activated);
-            Debug.Log(gameObject.name + " : indicators[" + i + "].inert" + indicators[i].inert);
+            //Debug.Log(gameObject.name + " : indicators[" + i + "].activated" + indicators[i].activated);
+            //Debug.Log(gameObject.name + " : indicators[" + i + "].inert" + indicators[i].inert);
             if (i != indicators.Length - 1)
             {
                 if (indicators[i].activated)
