@@ -78,7 +78,7 @@ public class AudioManager : MonoBehaviour
 
     void PlaySound(AudioClip clip)
     {
-        audioSource.Stop();
+        //audioSource.Stop();
         audioSource.PlayOneShot(clip);
     }
 
