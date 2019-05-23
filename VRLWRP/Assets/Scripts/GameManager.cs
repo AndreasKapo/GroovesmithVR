@@ -183,9 +183,9 @@ public class GameManager : MonoBehaviour {
     {
         if(previousSampleTime == 0 || (koreoGraphy.GetLatestSampleTime() > (previousSampleTime + beatLeewayTime)))
         {
-            if (previousSampleTime != 0 && koreoGraphy.GetLatestSampleTime() < (previousSampleTime + beatLeewayDebugWarningTime)) {
-                Debug.LogWarning("Possible double beat warning! Current sample time: " + koreoGraphy.GetLatestSampleTime() + " Previous sample time: " + previousSampleTime);
-            }
+            //if (previousSampleTime != 0 && koreoGraphy.GetLatestSampleTime() < (previousSampleTime + beatLeewayDebugWarningTime)) {
+            //    Debug.LogWarning("Possible double beat warning! Current sample time: " + koreoGraphy.GetLatestSampleTime() + " Previous sample time: " + previousSampleTime);
+            //}
             previousSampleTime = koreoGraphy.GetLatestSampleTime();
             beatHit.Raise();
             beatEventIndex++;
