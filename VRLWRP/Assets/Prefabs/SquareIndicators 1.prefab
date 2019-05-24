@@ -54,6 +54,7 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: ea5128bd01eb6544fa92a3d27f41cbb7, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  hitSuccessMaterial: {fileID: 2100000, guid: 917cad78a523443489b5a33365188c42, type: 2}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
   freeHitColorMaterial1: {fileID: 2100000, guid: 54e7522550846e9439a15723d966c4bd,
     type: 2}
@@ -276,6 +277,7 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: 942ef8dfa492b014db4ec7571b9d1c30, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  hitSuccessMaterial: {fileID: 0}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
   freeHitColorMaterial1: {fileID: 2100000, guid: 54e7522550846e9439a15723d966c4bd,
     type: 2}
@@ -384,6 +386,7 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: 4a82d39ccff63a848bb798ae3e5d2943, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  hitSuccessMaterial: {fileID: 0}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
   freeHitColorMaterial1: {fileID: 2100000, guid: 54e7522550846e9439a15723d966c4bd,
     type: 2}
@@ -464,7 +467,7 @@ Transform:
   m_GameObject: {fileID: 8192945925272245110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.08006973, y: 0.055224426, z: 0.04429819}
-  m_LocalScale: {x: 0.0075323586, y: 0.016015865, z: 0.009895593}
+  m_LocalScale: {x: 0.0061453497, y: 0.013066703, z: 0.008073418}
   m_Children:
   - {fileID: 8646061675092804849}
   - {fileID: 8192945925271949140}
@@ -546,6 +549,7 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: 864ce5eed8104bf45a758c6b6c178389, type: 2}
   inactiveMaterial: {fileID: 2100000, guid: 3f326468383e94247aac79615a59155e, type: 2}
   inertMaterial: {fileID: 2100000, guid: 0ca7aadc30eda51458ea88a806a35e18, type: 2}
+  hitSuccessMaterial: {fileID: 0}
   freeHitMaterial: {fileID: 2100000, guid: 45f8c5980ed5c364f91b6c927988aa71, type: 2}
   freeHitColorMaterial1: {fileID: 2100000, guid: 54e7522550846e9439a15723d966c4bd,
     type: 2}

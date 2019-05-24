@@ -127,7 +127,7 @@ public class IndicatorHitbox : MonoBehaviour
             hitInstance.GetComponent<ParticleSystem>().Play();
         }
         //hitInstance.transform.LookAt(playerCamera);
-        greenIndicator.hitSuccess = true;
+        greenIndicator.HitSuccess();
         AudioManager.instance.PlayGoodAnvilHit();
     }
 

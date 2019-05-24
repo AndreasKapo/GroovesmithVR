@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: GrinderFreeHit
   m_EditorClassIdentifier: 
-  mEventID: ' '
+  mEventID: FreeHit
   mEventList:
-  - mStartSample: 0
-    mEndSample: 117600
   - mStartSample: 2704800
     mEndSample: 2763600
   - mStartSample: 4968600
