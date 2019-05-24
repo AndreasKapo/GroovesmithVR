@@ -1,0 +1,300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4158099946284190697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148365155017554426}
+  - component: {fileID: 2484598424537915599}
+  - component: {fileID: 7018248448651908224}
+  - component: {fileID: 5374312542707186974}
+  - component: {fileID: 5374312542707186975}
+  - component: {fileID: 5374312542707186960}
+  - component: {fileID: 5374312542707186973}
+  - component: {fileID: 5374312542707186961}
+  - component: {fileID: 5374312542707186962}
+  - component: {fileID: 5374312542707186963}
+  m_Layer: 0
+  m_Name: Deco_Sword
+  m_TagString: SongMetal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1148365155017554426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -0.182, y: 2.499, z: 3.306}
+  m_LocalScale: {x: 0.62935925, y: 1.0163922, z: 0.9264608}
+  m_Children:
+  - {fileID: 5163042858574698394}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!137 &2484598424537915599
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1b6d05d2ad394c845b5a4cf3bdb0aa60, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 135306909328305466, guid: a93e10178f6d3de43b5ca0ac4265fb73, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights:
+  - 100
+  - 0
+  - 0
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0.00000017881393, y: 0.00045112893, z: 0.0007164739}
+    m_Extent: {x: 0.71135515, y: 0.07264109, z: 0.055699904}
+  m_DirtyAABB: 0
+--- !u!95 &7018248448651908224
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a93e10178f6d3de43b5ca0ac4265fb73, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &5374312542707186974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &5374312542707186975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4309566, y: 0.08144997, z: 0.063737266}
+  m_Center: {x: -0.010718062, y: -0.0010917691, z: 0.00027159095}
+--- !u!65 &5374312542707186960
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.33673543, y: 0.08144997, z: 0.06437955}
+  m_Center: {x: 0.0003652402, y: -0.0010917691, z: -0.00048781588}
+--- !u!114 &5374312542707186973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffsetRight: {fileID: 0}
+  m_snapOffsetLeft: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 5374312542707186975}
+  - {fileID: 5374312542707186960}
+--- !u!114 &5374312542707186961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bddf1b8f9ff924e8c07d42eeab36c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shortCollider: {fileID: 5374312542707186960}
+  longCollider: {fileID: 5374312542707186975}
+  isOnAnvil: 0
+  transformName: SwordMetalSongLocation
+--- !u!114 &5374312542707186962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17281c0a594767148b81d55ea1180e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blendOne: 0
+  blendTwo: 0
+  blendThree: 0
+--- !u!114 &5374312542707186963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158099946284190697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21a7d183fee9747b342cdb12902e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b4b62dcc3edac1b4c8b00438f0814838, type: 3}
+  koreography: {fileID: 11400000, guid: a6d134f198f1a62449db3eed55617b17, type: 2}
+  songTitle: Avil1_Easy
+--- !u!1001 &5163042858574302490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1148365155017554426}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_Name
+      value: Deco_SwordHilt
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.8844511
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0012420664
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0006963712
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14331393
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.13063334
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2109681
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee1d9764431ada64b8db4c6f81d4e80c, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 781c976d2a3ebc64f8dc28273d204cb1, type: 3}
+--- !u!4 &5163042858574698394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 781c976d2a3ebc64f8dc28273d204cb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5163042858574302490}
+  m_PrefabAsset: {fileID: 0}
