@@ -13,6 +13,14 @@ public class AnvilMetalTrigger : MonoBehaviour {
     MetalCollider metalCollider;
     bool hasMetal;
 
+    public AudioClip startSongClip;
+    AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "SongMetal" && !other.GetComponent<OVRGrabbable>().isGrabbed && !hasMetal)
@@ -48,6 +56,7 @@ public class AnvilMetalTrigger : MonoBehaviour {
     {
         if(other.tag == "HammerHead" && hasMetal && GameManager.instance.worldState == WorldState.Default)
         {
+            audioSource.PlayOneShot(startSongClip);
             beginAnvilTransition.Raise();
         }
     }
