@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnvilMetalTrigger : MonoBehaviour {
-
-    public Transform metalSongLocation;
+    
     public Transform trophySpawnLocation;
     public GameEvent beginAnvilTransition;
 
@@ -18,9 +17,11 @@ public class AnvilMetalTrigger : MonoBehaviour {
     {
         if(other.tag == "SongMetal" && !other.GetComponent<OVRGrabbable>().isGrabbed && !hasMetal)
         {
+            metalCollider = other.GetComponent<MetalCollider>();
+            Transform metalSongLocation = GameObject.Find(metalCollider.transformName).transform;
+
             other.transform.position = metalSongLocation.position;
             other.transform.rotation = metalSongLocation.rotation;
-            metalCollider = other.GetComponent<MetalCollider>();
             metalCollider.PutOnAnvil();
 
             songMetal = other.GetComponent<SongMetal>();

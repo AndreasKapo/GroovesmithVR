@@ -737,21 +737,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4705357455925082342, guid: 177d685c9f5ae8c40b6db59aaa5809ac,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.46074712
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705357455925082342, guid: 177d685c9f5ae8c40b6db59aaa5809ac,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.46074712
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705357455925082342, guid: 177d685c9f5ae8c40b6db59aaa5809ac,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.46074712
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 177d685c9f5ae8c40b6db59aaa5809ac, type: 3}
 --- !u!1001 &237031548
@@ -3108,21 +3093,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -94.76001
       objectReference: {fileID: 0}
-    - target: {fileID: 5208694554507988709, guid: a8d62fd128bcfde40a3ea0a72b05eb3d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.62935925
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208694554507988709, guid: a8d62fd128bcfde40a3ea0a72b05eb3d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0163922
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208694554507988709, guid: a8d62fd128bcfde40a3ea0a72b05eb3d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.9264608
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d62fd128bcfde40a3ea0a72b05eb3d, type: 3}
 --- !u!4 &976813860 stripped
@@ -4683,9 +4653,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355799759}
-  m_LocalRotation: {x: -0.99959505, y: 0.0034883104, z: -0.0034882359, w: 0.0280264}
-  m_LocalPosition: {x: 0.011660086, y: -0.6175728, z: 0.4050938}
-  m_LocalScale: {x: 1.6064179, y: 118.02461, z: 0.4992412}
+  m_LocalRotation: {x: -0.6580885, y: -0.00034055626, z: 0.00034054747, w: 0.7529404}
+  m_LocalPosition: {x: 0.011662214, y: -0.23702267, z: 0.40468165}
+  m_LocalScale: {x: 1.6064087, y: 9.725555, z: 7.859412}
   m_Children: []
   m_Father: {fileID: 4400839639154607484}
   m_RootOrder: 2
@@ -7868,7 +7838,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12fd8d4bf4e2744fa52a9a2f736ba99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metalSongLocation: {fileID: 4400839638093921566}
   trophySpawnLocation: {fileID: 1451671399}
   beginAnvilTransition: {fileID: 11400000, guid: 78ebf728f7845e844bb15f931c408046,
     type: 2}

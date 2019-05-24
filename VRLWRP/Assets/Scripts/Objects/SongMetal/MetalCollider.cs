@@ -8,6 +8,7 @@ public class MetalCollider : MonoBehaviour {
     public Collider longCollider;
     Rigidbody rb;
     public bool isOnAnvil;
+    public string transformName;
 
     private void Awake()
     {

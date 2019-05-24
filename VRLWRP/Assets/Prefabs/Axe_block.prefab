@@ -152,6 +152,7 @@ MonoBehaviour:
   shortCollider: {fileID: 8346338303736552811}
   longCollider: {fileID: 3477859866853877234}
   isOnAnvil: 0
+  transformName: AxeMetalSongLocation
 --- !u!65 &8346338303736552811
 BoxCollider:
   m_ObjectHideFlags: 0
