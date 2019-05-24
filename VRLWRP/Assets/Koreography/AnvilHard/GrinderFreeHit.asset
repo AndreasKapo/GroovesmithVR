@@ -18,8 +18,8 @@ MonoBehaviour:
     mEndSample: 117600
   - mStartSample: 2704800
     mEndSample: 2763600
-  - mStartSample: 4468800
-    mEndSample: 4880400
+  - mStartSample: 4968600
+    mEndSample: 5115600
   - mStartSample: 8643600
     mEndSample: 8761200
   _SerializedPayloadTypes: []
