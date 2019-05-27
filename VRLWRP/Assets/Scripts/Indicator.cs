@@ -19,6 +19,7 @@ public class Indicator : MonoBehaviour
     public Material activatedMaterial;
     public Material inactiveMaterial;
     public Material inertMaterial;
+    public Material hitSuccessMaterial;
 
     public Material freeHitMaterial;
     public Material freeHitColorMaterial1;
@@ -113,6 +114,12 @@ public class Indicator : MonoBehaviour
             activated = true;
             inert = true;
         }
+    }
+
+    public void HitSuccess()
+    {
+        this.hitSuccess = true;
+        GetComponent<Renderer>().material = hitSuccessMaterial;
     }
 
     public void RenderInert()

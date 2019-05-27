@@ -90,8 +90,6 @@ MonoBehaviour:
     mEndSample: 4674600
   - mStartSample: 4909800
     mEndSample: 4909800
-  - mStartSample: 4968600
-    mEndSample: 4968600
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
